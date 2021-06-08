@@ -1,0 +1,47 @@
+---
+title: "userR! 2021 afrimapr tutorial session three: practical"
+date: "07 July 2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## A. Outline of this tutorial practical session
+
+This session is a practical one where you can practice using your own data for mapping. While we have learnt about different data types today, for this practical session you will need coordinate data to use the skills you have learnt so far. It is possible that your data will be in a different format, for example your data may only have names of regions or places and no coordinates. For this, you will need to learn how to join these names to spatial data that does have the coordinates. If this is the case, please work through the afrimapr online tutorial on [joining](https://andysouth.shinyapps.io/join-admin/#section-outline-of-this-tutorial); also available via [afrilearnr](https://github.com/afrimapr/afrilearnr/tree/main/inst/tutorials/join-admin).
+
+If you do not have your own data, or data in a different format, we have provided an example dataset in the data folder in the RStudio Cloud project called `WHO_Africa_HealthFacilities.csv` (a subset of the dataset: World Health Organization (WHO) (2019) A spatial database of health facilities managed by the public health sector in sub-Saharan Africa. [Reference Source](https://www.who.int/malaria/areas/surveillance/public-sector-health-facilities-ss-africa/en/)).
+
+
+## B. Map your own coordinate data
+
+#### Suggested steps
+
+Remember, to map these data in R usually requires a 3 step process:
+
+1. read the data file into R (hint: `readr` package; `read_csv`)
+2. convert the dataframe into an R spatial (package `sf`) object and set `crs` (hint: `sf::st_as_sf`)
+3. plot the `sf` object (create a quick interactive plot using `mapview`)
+
+![**Mapping steps**](../../for_instructors/images/steps.jpg)
+
+
+#### Extra steps
+
+1. Practice exploring what the object contains (hint: e.g. `head`, `str`, `names`, `class`)
+2. What happens when you exclude the `crs` argument?
+3. Play with the arguments in `mapview` (e.g. `zcol`, `label`, `cex`)
+
+
+#### `tmap`
+
+* Create a quick interactive plot using `tmap` (hint: `tmap_mode("plot")` for a static map; `tmap_mode("view")` for the interactive viewing mode)
+
+
+#### Combine your coordinate data with objects from afrilearndata
+
+* Use your `sf` object from above and map using `tmap` (hint: use `tm_shape` & `tm_symbols`)
+

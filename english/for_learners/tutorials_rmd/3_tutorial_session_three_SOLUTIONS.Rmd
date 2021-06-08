@@ -1,0 +1,112 @@
+---
+title: "userR! 2021 afrimapr tutorial session three: practical_SOLUTIONS"
+date: "07 July 2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r packages & data}
+library(tmap)
+library(mapview)
+library(sf)
+library(readr)
+library(afrilearndata)
+
+```
+
+
+```{r Suggested steps1}
+
+#  Remember, to map these data in R usually requires a 3 step process.
+
+# 1. read the data file into R (hint: `readr` package; `read_csv`)
+WHOdf <- read_csv("/cloud/project/english/for_learners/data/WHO_Africa_HealthFacilities.csv")
+```
+
+
+```{r Suggested steps2}
+
+# 2. convert the dataframe into an R spatial (package `sf`) object and set `crs` (hint: `sf::st_as_sf`)
+
+WHOsf <- sf::st_as_sf(WHOdf, 
+                      coords=c("Long", "Lat"),
+                      crs=4326)
+```
+
+
+```{r Suggested steps3}
+
+# 3. plot the `sf` object (create a quick interactive plot using `mapview`)
+mapview(WHOsf)
+```
+
+
+```{r Extra steps1}
+
+# 1. Practice exploring what the object contains (hint: e.g. `head`, `str`, `names`, `class`)
+head(WHOsf)
+#str(WHOsf)
+#names(WHOsf)
+#class(WHOsf)
+
+```
+
+
+``` {r Extra steps2}
+
+# 2. What happens when you exclude the `crs` argument?
+WHOsf <- sf::st_as_sf(WHOdf, 
+                      coords=c("Long", "Lat"))
+mapview(WHOsf)
+
+# When there is no `crs` argument, the sf object is still created but mapview is unable to position it in the world. The points still appear but there is no map background.
+```
+
+
+``` {r Extra steps3}
+
+# 3. Play with the arguments in `mapview` (e.g. `zcol`, `label`, `cex`)
+WHOsf <- sf::st_as_sf(WHOdf, 
+                      coords=c("Long", "Lat"),
+                      crs=4326)
+
+mapview(WHOsf, zcol='Admin1', label='Country', cex=5)
+
+```
+  
+
+```{r `tmap`}
+# Create a quick interactive plot using `tmap` (hint: `tmap_mode("plot")` for a static map; `tmap_mode("view")` for the interactive viewing mode)
+
+tmap_mode("view")
+tmap::tm_shape(WHOsf) +
+  tm_symbols(col = "black", scale = 1)
+
+```
+
+
+```{r tmap & afrilearndata, message=FALSE, warning=FALSE}
+
+# Combine your coordinate data with objects from afrilearndata
+# Use your `sf` object from above and map using `tmap` (hint: use `tm_shape` & `tm_symbols`)
+
+tmap::tm_shape(WHOsf) +
+    tm_symbols(col = "black", scale = 1) +
+  tm_shape(afripop2020) +
+    tm_raster(palette = rev(viridisLite::magma(5)), breaks=c(0,2,20,200,2000,25000)) +
+  tm_shape(africountries) +
+    tm_borders("white", lwd = .5) +
+  #   tm_text("iso_a3", size = "AREA") +
+  tm_shape(afrihighway) +
+    tm_lines(col = "red") +
+  tm_shape(africapitals) +
+    tm_symbols(col = "blue", alpha=0.4, scale = .6 ) +
+  tm_legend(show = FALSE) 
+```
+
+
+
+   
