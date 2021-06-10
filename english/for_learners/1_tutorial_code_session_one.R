@@ -1,4 +1,4 @@
-#### LOAD TUTORIAL IN VIEWER PANE ----
+#### RUN THE NEXT 2 LINES TO LOAD TUTORIAL IN VIEWER PANE ----
 source("english/for_instructors/scripts/viewerpane_html.R")
 viewerpane_html("english/for_learners/tutorials_pdf_html/1_tutorial_session_one.html")
 
@@ -6,10 +6,10 @@ viewerpane_html("english/for_learners/tutorials_pdf_html/1_tutorial_session_one.
 #### SECTION B: LOADING PACKAGES AND DATA ----
 
 # for vector data handling
-library(sf) 
+library(sf)
 
 # for raster data handling
-library(raster) 
+library(raster)
 
 # example spatial data for Africa
 library(afrilearndata)
@@ -31,16 +31,16 @@ View(afrihighway)
 View(africapitals)
 
 
-# first tmap map 
+# first tmap map
 
-tmap_mode("plot") 
+tmap_mode("plot")
 
 tmap::tm_shape(afripop2020) +
   tm_raster(palette = rev(viridisLite::magma(5)), breaks=c(0,2,20,200,2000,25000)) +
   tm_shape(africountries) +
   tm_borders("white", lwd = .5) +
   tm_shape(afrihighway) +
-  tm_lines(col = "red") + 
+  tm_lines(col = "red") +
   tm_shape(africapitals) +
   tm_symbols(col = "blue", alpha=0.4, scale = .6 )+
   tm_legend(show = FALSE)
@@ -141,7 +141,7 @@ tm_shape(afripop2020) +
 # tmap-raster2
 
 #changing the colour palette
-tm_shape(afripop2020) + 
+tm_shape(afripop2020) +
   tm_raster(palette = rev(viridisLite::magma(5)), breaks=c(0,2,20,200,2000,25000))
 
 
@@ -150,7 +150,7 @@ tm_shape(afripop2020) +
 # tmap-vector-raster1a
 
 tmap::tm_shape(afripop2020) +
-  tm_raster(palette = rev(viridisLite::magma(5)), breaks=c(0,2,20,200,2000,25000)) 
+  tm_raster(palette = rev(viridisLite::magma(5)), breaks=c(0,2,20,200,2000,25000))
 
 # tmap-vector-raster1b
 
@@ -158,7 +158,7 @@ tmap::tm_shape(afripop2020) +
   tm_raster(palette = rev(viridisLite::magma(5)), breaks=c(0,2,20,200,2000,25000)) +
   tm_shape(africountries) +
   tm_borders("white", lwd = .5) +
-  tm_text("iso_a3", size = "AREA") 
+  tm_text("iso_a3", size = "AREA")
 
 # tmap-vector-raster1c
 
@@ -178,7 +178,7 @@ tmap::tm_shape(afripop2020) +
   tm_borders("white", lwd = .5) +
   tm_text("iso_a3", size = "AREA") +
   tm_shape(afrihighway) +
-  tm_lines(col = "blue") + 
+  tm_lines(col = "blue") +
   tm_shape(africapitals) +
   tm_symbols(col = "green",  scale = .6 ) +
   tm_legend(show = FALSE)
@@ -187,7 +187,7 @@ tmap::tm_shape(afripop2020) +
 
 # tmap-interactive
 
-tmap_mode('view') 
+tmap_mode('view')
 
 tmap::tm_shape(afripop2020) +
   tm_raster(palette = rev(viridisLite::magma(5)), breaks=c(0,2,20,200,2000,25000)) +
@@ -195,7 +195,7 @@ tmap::tm_shape(afripop2020) +
   tm_borders("white", lwd = .5) +
   tm_text("iso_a3", size = "AREA") +
   tm_shape(afrihighway) +
-  tm_lines(col = "blue") + 
+  tm_lines(col = "blue") +
   tm_shape(africapitals) +
   tm_symbols(col = "green",  scale = .6 ) +
   tm_legend(show = FALSE)
