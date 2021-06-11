@@ -24,24 +24,24 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## A. Outline of this tutorial session
 
-An entry level outline to demonstrate getting spatial data of different types into R as a first step to mapping it. The aim is to support you getting your own data into R before making maps or other plots. It is aimed at participants with limited R and GIS experience.
+An entry level outline to demonstrate getting spatial data of different types into R. The aim is to support you getting your own data into R before making maps or other plots. It is aimed at participants with limited R and GIS experience.
 
 ### Learning outcomes
 
-By the end of this session, you would have learnt how get different spatial data types into R, and how to use these data to create static and interactive maps. Specifically, you will be able to:
+By the end of this session, you will have learnt how get different spatial data types into R, and how to use these data to create static and interactive maps. Specifically, you will be able to:
 
 * read spatial data in R using `sf` and `raster`
 * make a map from a coordinates text file
 * understand the importance of CRS (Coordinate Reference System) to place data on a world map
 * read in other spatial data files for vector and raster data
-* create static and interactive maps using the mapview package and example data available from the afrilearndata package
-* understand options for making mapview maps more useful
+* create static and interactive maps using the `mapview` package and example data available from the `afrilearndata` package
+* understand options for making `mapview` maps more useful
 
-Please do reach out after the course to the trainers and other participants to address any difficulties you may come across.
+Please do reach out during and/or after the course to the trainers and other participants to address any difficulties you come across.
 
 
 ## B. Loading packages and data
-For the purposes of this useR! 2021 tutorial, the packages have been installed into the R Studio Cloud project. However, if you run this tutorial locally on your own computer, you will need to install these packages if you haven't already done so.
+For the purposes of this useR! 2021 tutorial, the packages have been installed into the RStudio Cloud project. However, if you run this tutorial locally on your own computer, you may need to install them first.
 
 
 ```{r packages}
@@ -67,7 +67,7 @@ library(readr)
 ```
 
 
-## C. Read spatial data from files 
+## C. Read spatial data from files & preview with mapview
 
 So far we have been using data that already exists within R as an R object.
 
@@ -96,11 +96,28 @@ myobject2 <- raster::raster(filename2)
 
 ```
 
+Remember for these commands to work, your data already has to be in either vector format (e.g shapefile, geopackage or kml) or in raster format (e.g. .tif or .grd). Find more information on which file formats will work here at https://en.wikipedia.org/wiki/GIS_file_formats. 
 
-Remember for these commands to work, your data already has to be in either vector format (e.g shapefiles) or in raster format (e.g. image files like .tif or .jpg or other). Find more information on which file formats will work here at https://en.wikipedia.org/wiki/GIS_file_formats. We’ll talk some more about this now and we will show you how to load other file formats for mapping as well.
+Earlier we demonstrated using the package `tmap`. Here we are going to introduce the package `mapview` for quickly making interactive maps. In many ways the interactive maps made by `mapview` are very similar to those from `tmap`. We like `mapview` because it is super-easy to make a first preview map to look at your data. All you need is `mapview([name-of-spatial-object])` and it should make a map. You don't need to know whether the object contains points, lines, polygons or raster data, and you don't need to remember any additional options to get that first preview.
 
+```{r mapview1}
+
+library(mapview)
+mapview(myobject1)
+
+```
+
+```{r mapview2}
+
+mapview(myobject2)
+
+```
+
+Later we will see that `mapview` arguments can be used to give you more control over map appearance. 
 
 ## D. .csv, .txt or .xls file with coordinates
+
+Up until now we have been using files and objects that are already spatial - i.e. they came from an R spatial package or GIS. Now we are going to move onto looking at data that are not yet in a spatial format, they could just be a spreadsheet or text file that you have created yourself.
 
 Text files containing point data are one of the commonest file types that we see in small-scale operational mapping of data. Usually these consist of one row per record (e.g. the location of a health facility or disease case or dwelling) with two columns containing the coordinates of the location (e.g. longitude & latitude or x & y), and other columns containing attributes of that location (e.g. facility or disease type). 
 
