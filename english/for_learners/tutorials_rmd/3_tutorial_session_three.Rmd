@@ -15,8 +15,13 @@ This session is a practical one where you can practice using your own data for m
 
 If you do not have your own data, or data in a different format, we have provided an example dataset in the data folder in the RStudio Cloud project called `WHO_Africa_HealthFacilities.csv` (a subset of the dataset: World Health Organization (WHO) (2019) A spatial database of health facilities managed by the public health sector in sub-Saharan Africa. [Reference Source](https://www.who.int/malaria/areas/surveillance/public-sector-health-facilities-ss-africa/en/)).
 
+## B. Uploading data to RStudio Cloud
 
-## B. Map your own coordinate data
+To map your own data on RStudio Cloud, you will first need to upload your data by clicking on `Upload` in the Files pane (typically the bottom right pane). We suggest you save to a `data` folder in the directory where you are running the R script (for this tutorial it is `english/for_learners/data`). 
+
+[Andy: I suggest we make it super clear where we expect learners to put the data to an existing folder. In my experience learners in courses seldom create data folders where you expect ;-) ]
+
+## C. Map your own coordinate data
 
 #### Suggested steps
 

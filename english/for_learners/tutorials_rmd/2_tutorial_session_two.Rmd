@@ -174,9 +174,7 @@ The below steps apply if you have point data saved in tabular format with two co
 * replace `"longitude_deg", "latitude_deg"` with the names of the columns containing the coordinates in your data
 * you may need to change `crs=4326` as explained below
 
-
-If you are doing this on RStudio Cloud, remember to first upload your data to the cloud by clicking on `Upload` in the Files pane (typically the bottom right pane). Make sure the data is uploaded to the correct folder. For easy access, create a `data` folder in the directory where you are running the R script from (for this tutorial it is english/for_learners). Then upload your own data into the `data` folder you’ve just created.
-
+(On RStudio Cloud, you would need to first upload your data, we will come to that in session 3).
 
 ### CRS
 `crs` stands for Coordinate Reference System. It determines how coordinates are converted to a location on the Earth. In this case it tells `sf` what system to expect. In the majority of cases, coordinates (e.g. collected from a GPS) are stored in a system represented by the code `4326`. 4326 is the EPSG (European Petroleum Survey Group) code for longitude, latitude using the WGS84 datum, but you don't really need to know that. 4326 is a good number to remember! If you would like to read more, visit https://epsg.io/about.
