@@ -149,7 +149,7 @@ mydf <- mydf[(1:100), ] # select first 100 rows just to make analysis quicker he
 
 ```{r csv-airports2}
 
-# Step 2. Convert to sf object and set crs
+# Step 2. Convert to sf object and set CRS (Coordinate Reference System)
 
 mysf <- sf::st_as_sf(mydf, 
                      coords=c("longitude_deg", "latitude_deg"),
@@ -173,6 +173,7 @@ The below steps apply if you have point data saved in tabular format with two co
 * set filename to the path to your file (this might just be something like `"mydata/myfile.csv"`) 
 * replace `"longitude_deg", "latitude_deg"` with the names of the columns containing the coordinates in your data
 * you may need to change `crs=4326` as explained below
+
 
 If you are doing this on RStudio Cloud, remember to first upload your data to the cloud by clicking on `Upload` in the Files pane (typically the bottom right pane). Make sure the data is uploaded to the correct folder. For easy access, create a `data` folder in the directory where you are running the R script from (for this tutorial it is english/for_learners). Then upload your own data into the `data` folder you’ve just created.
 
@@ -205,7 +206,7 @@ mapview(mysf)
 ```
 
 
-When there is no `crs` argument, the sf object is still created but mapview is unable to position it in the world. The points still appear but there is no map background.
+When there is no `crs` argument, the `sf` object is still created but `mapview` is unable to position it in the world. The points still appear but there is no map background.
 
 
 ### .xls files
@@ -217,7 +218,7 @@ You can read an excel file into a dataframe using the package [readxl](https://r
 
 ## E. Directly create an R object
 
-An alternative is to directly create a dataframe within R containing coordinates. This is similar to the approach from the previous section except that dataframe creation replaces file reading at step 1.
+An alternative to loading a file is to directly create a dataframe within R containing coordinates. This is similar to the approach from the previous section except that dataframe creation replaces file reading at step 1.
 
 In the example below try changing the coordinates within the dataframe at step 1, and run to see the points change.
 
@@ -290,7 +291,11 @@ mapview(afrihighway)
 
 ## H. raster tiff 
 
-To read in raster data we need to use the package `raster` instead of `sf`. The reading function in `raster` is also called `raster`. To read in a file use `myrast <- raster::raster(filename)` or just `myrast <- raster(filename)`. Similar to vector formats, you can also use `mapview` to give a quick view of raster objects by simply passing the object name e.g. `mapview(myrast)`.
+To read in raster data we can use the package `raster` instead of `sf`. 
+
+(Note that there also newer packages `stars` and `terra` that may come to replace `raster` in the coming months and years, but for now we decided to stick with `raster` that is more well known and tested.)  
+
+The reading function in `raster` is also called `raster`. To read in a file use `myrast <- raster::raster(filename)` or just `myrast <- raster(filename)`. Similar to vector formats, you can also use `mapview` to give a quick view of raster objects by simply passing the object name e.g. `mapview(myrast)`.
 
 `raster(filename)` will also work with other raster formats such as ascii grids or .jpg.
 
@@ -325,6 +330,8 @@ filename <- system.file("extdata", "afriairports.csv", package="afrilearndata", 
 mydf <- readr::read_csv(filename)
 
 mydf <- mydf[(1:100), ] #select first 100 rows just to make quicker online
+
+#or can select a single country
 #mydf <- mydf[which(mydf$country_name == "Burkina Faso"), ]
 
 # 2. convert to sf object
@@ -359,7 +366,7 @@ at | a series of numeric values e.g. `c(0,1,10)` | breakpoints between colours
 
 ## Next steps
 
-This is a start, there are plenty of other options for making maps in R, such as `ggplot2`. For more detailed information and lessons, please see the [online tutorials](https://afrimapr.github.io/afrimapr.website/training/) and the [afrilearnr](https://github.com/afrimapr/afrilearnr) package containing these [tutorials](https://github.com/afrimapr/afrilearnr/tree/main/inst/tutorials) on github.
+This is a start, there are plenty of other options for making maps in R. For more detailed information and lessons, please see the [online tutorials](https://afrimapr.github.io/afrimapr.website/training/) and the [afrilearnr](https://github.com/afrimapr/afrilearnr) package containing these [tutorials](https://github.com/afrimapr/afrilearnr/tree/main/inst/tutorials) on github.
 
 More information on reading different spatial file formats into R can be found in [this section in the excellent Geocomputation in R](https://geocompr.robinlovelace.net/read-write.html#data-input).
 
@@ -373,7 +380,7 @@ We've shown you :
 2. how to make a map from a coordinates text file
 3. the importance of CRS (Coordinate Reference System) to place data on a world map
 4. how to read in other spatial data files for vector and raster data
-5. options for making mapview maps more useful
+5. options for making `mapview` maps more useful
 
 
 ## useR! 2021: Next session
