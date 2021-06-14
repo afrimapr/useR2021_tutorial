@@ -1,6 +1,6 @@
-
-#### LOAD TUTORIAL IN VIEWER PANE ----
-
+#### RUN THE NEXT 2 LINES TO LOAD TUTORIAL IN VIEWER PANE ----
+source("english/for_instructors/scripts/viewerpane_html.R")
+viewerpane_html("english/for_learners/tutorials_pdf_html/2_tutorial_session_two.html")
 
 
 

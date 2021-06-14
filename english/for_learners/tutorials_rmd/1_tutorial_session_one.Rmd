@@ -2,8 +2,8 @@
 title: 'userR! 2021 afrimapr tutorial session one: Introduction to spatial data'
 date: "07 July 2021"
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 always_allow_html: true # to fix a knit to pdf error
 ---
 
@@ -19,9 +19,6 @@ The tutorial is based on the [afrilearnr](https://github.com/afrimapr/afrilearnr
 The tutorial has been adapted for useR! 2021 - please see the [online tutorials](https://afrimapr.github.io/afrimapr.website/training/) for more detailed information and lessons.
 
 PDFs of the tutorials have been included in the project documents folder.
-
-[Andy: I suggest deleting the next few lines, you provide the pdf so not really needed, also learner is likely to be reading from the html in which case knit option won't be available]
-To get your own pdf of this tutorial, click on `Knit` in the RStudio toolbar and select `Knit to PDF`. Alternatively, `Knit to HTML` and once the html page has opened, click `Open in Browser` and then print a pdf from the browser window.
 
 
 ## A. Outline of this tutorial session
@@ -39,7 +36,7 @@ By the end of this session, you will have learnt how to store and handle spatial
 * overlay several data types (layers) on a map
 * learn how to change the colour palette to represent data on a map
 
-Please do reach out during and/or after the course to the trainers and other participants to address any difficulties you may come across.
+Please do reach out during and/or after the course to the trainers and other participants to address any difficulties you come across.
 
 
 ## B. Loading packages and data
@@ -116,8 +113,6 @@ Now, to view these data on a map:
 ```{r tmap-first-view, echo=FALSE}
 
 # first tmap map
-# **explain why we are using tmap here?**
-# Andy: in the learnr tutorial the aim was to show the map first without showing the code. I've added echo=FALSE above to achieve the same. Otherwise I think the code below may be a bit overwhelming. Better that the first plot code they see is on individual layers a bit later. 
 
 tmap_mode("plot") 
 
@@ -152,7 +147,7 @@ In R there are various functions that can help us explore what an object contain
 3. names()      gives just column names
 4. class()      gives the class of the object, that is broadly what sort of object it is  
 
-Have a look at the outputs for `africapitals` :
+Have a look at the outputs for `africapitals`:
 
 ```{r sf-points-str}
 
@@ -241,7 +236,7 @@ tm_shape(africapitals) +
 ```
 
 **Vector data: lines**
-The highway network (lines) can be plotted using the same `tm_shape([object_name])` to start, then adding `tm_lines()` to display the lines. See other options for colouring lines.
+The highway network (lines) can be plotted using the same `tm_shape([object_name])` to start, then adding `tm_lines()` to display the lines. See other options below for colouring lines.
 
 ```{r tmap-lines1a}
 
@@ -253,7 +248,7 @@ tm_shape(afrihighway) +
 
 ```
 
-One colour for all lines :
+One colour for all lines:
 
 ```{r tmap-lines1b}
 
@@ -265,7 +260,7 @@ tm_shape(afrihighway) +
 
 ```
 
-Colour dependent on one of the dataframe columns :
+Colour dependent on one of the dataframe columns:
 
 ```{r tmap-lines1c}
 
@@ -273,8 +268,6 @@ Colour dependent on one of the dataframe columns :
 tmap_mode('plot') 
 tm_shape(afrihighway) +
    tm_lines(col = "Name")  # use a column name from the object
-
-
 
 ```
 
@@ -332,6 +325,7 @@ tm_shape(afripop2020) +
   tm_raster()
 
 ```
+
 We can specify the `breaks` or cutoffs for different colours to show differences between the lower values more clearly. Experiment with changing the `breaks=` values.
 
 ```{r tmap-raster1b}
@@ -360,7 +354,7 @@ In the previous section, we showed how to make maps of individual data objects. 
 
 `tmap` (and some other map packages) use the `+` symbol to combine layers. See the maps below where another layer is added for each map.
 
-Raster only :
+**Raster only:**
 
 ```{r tmap-vector-raster1a}
 
@@ -371,7 +365,7 @@ tmap::tm_shape(afripop2020) +
   tm_raster(palette = rev(viridisLite::magma(5)), breaks=c(0,2,20,200,2000,25000)) 
 ```
 
-Adding country polygons and text labels :
+**Adding country polygons and text labels:**
 
 ```{r tmap-vector-raster1b}
 
@@ -385,7 +379,7 @@ tmap::tm_shape(afripop2020) +
   tm_text("iso_a3", size = "AREA") 
 ```
 
-Adding road lines :
+**Adding road lines:**
 
 ```{r tmap-vector-raster1c}
 
@@ -402,7 +396,7 @@ tmap::tm_shape(afripop2020) +
 
 ```
 
-Adding capitals points :
+**Adding capitals points:**
 
 ```{r tmap-vector-raster1d}
 
@@ -469,7 +463,7 @@ Good persistence for getting this far!
 
 We hope you've enjoyed this brief intro to mapping with R.
 
-We've shown you :
+We've shown you:
 
 1. storing and handling spatial data with the packages `sf` and `raster` 
 2. making static and interactive maps with package `tmap`
@@ -483,11 +477,6 @@ Our next session in this useR! 2021 tutorial will be an entry level outline to d
 
 
 ## BREAK TIME OF 15 MINS
-
-
-## Optional exercises
-**to include a few exercises for learners to work through should they have the time**
-
 
 
 
