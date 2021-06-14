@@ -117,15 +117,15 @@ Later we will see that `mapview` arguments can be used to give you more control 
 
 ## D. .csv, .txt or .xls file with coordinates
 
-Up until now we have been using files and objects that are already spatial - i.e. they came from an R spatial package or GIS. Now we are going to move onto looking at data that are not yet in a spatial format, they could just be a spreadsheet or text file that you have created yourself.
+Up until now we have been using files and objects that are already spatial - they came from an R spatial package or GIS. Now we are going to move onto looking at data that are not yet in a spatial format. This could be just be a spreadsheet or text file that you have created yourself.
 
 Text files containing point data are one of the commonest file types that we see in small-scale operational mapping of data. Usually these consist of one row per record (e.g. the location of a health facility or disease case or dwelling) with two columns containing the coordinates of the location (e.g. longitude & latitude or x & y), and other columns containing attributes of that location (e.g. facility or disease type). 
 
 attribute1  | longitude | latitude
 ----------- | --------- | ------------------
-location1   | -10 | 20
-location2   | 10  | 0  
-...         |     |
+location1   | -10       | 20
+location2   | 10        | 0  
+...         |           |
 
 These files can be `.csv` comma delimited, or `.txt` space delimited or various spreadsheet formats including `.xls`.
 
@@ -143,7 +143,7 @@ Here we will demonstrate the 3 steps using some airport data from the excellent 
 filename <- system.file("extdata", "afriairports.csv", package="afrilearndata", mustWork=TRUE)
 mydf <- readr::read_csv(filename)
 
-mydf <- mydf[(1:100), ] # select first 100 rows just to make quicker online
+mydf <- mydf[(1:100), ] # select first 100 rows just to make analysis quicker here
 ```
 
 
