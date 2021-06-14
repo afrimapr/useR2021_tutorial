@@ -27,7 +27,7 @@ WHOdf <- read_csv("/cloud/project/english/for_learners/data/WHO_Africa_HealthFac
 
 #Andy: it's cool that these filepaths work on cloud from the console and running from the Rmd. Can we provide some brief instruction for what users should do if running the project locally ?
 
-#Andy: brief explanation of some of my naming OCD, you can choose whether to use it or not :-)
+#Andy: brief explanation of some of my naming OCD, you can choose whether to use it or not (I realise that I don't always follow it either !) :-)
 #I think I would use dfhealth & sfhealth & health_demo.csv
 #I try to avoid capitals in object & filenames where possible to reduce risk of getting it wrong (for both learners & instructors !) & make typing easier.
 #I would put df sf at start of object name - easier to see which object types you have

@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## A. Outline of this tutorial practical session
 
-This session is a practical one where you can practice using your own data for mapping. While we have learnt about different data types today, for this practical session you will need coordinate data to use the skills you have learnt so far. It is possible that your data will be in a different format, for example your data may only have names of regions or places and no coordinates. For this, you will need to learn how to join these names to spatial data that does have the coordinates. If this is the case, please work through the afrimapr online tutorial on [joining](https://andysouth.shinyapps.io/join-admin/#section-outline-of-this-tutorial); also available via [afrilearnr](https://github.com/afrimapr/afrilearnr/tree/main/inst/tutorials/join-admin).
+This session is a practical one where you can practice using your own data for mapping. While we have learnt about different data types today, for this practical session you will need coordinate data to use the skills you have learnt so far. It is possible that your data will be in a different format, for example your data may only have names of regions or places and no coordinates. For this go to section D. 
 
 If you do not have your own data, or data in a different format, we have provided an example dataset in the data folder in the RStudio Cloud project called `WHO_Africa_HealthFacilities.csv` (a subset of the dataset: World Health Organization (WHO) (2019) A spatial database of health facilities managed by the public health sector in sub-Saharan Africa. [Reference Source](https://www.who.int/malaria/areas/surveillance/public-sector-health-facilities-ss-africa/en/)).
 
@@ -20,6 +20,8 @@ If you do not have your own data, or data in a different format, we have provide
 To map your own data on RStudio Cloud, you will first need to upload your data by clicking on `Upload` in the Files pane (typically the bottom right pane). We suggest you save to a `data` folder in the directory where you are running the R script (for this tutorial it is `english/for_learners/data`). 
 
 [Andy: I suggest we make it super clear where we expect learners to put the data to an existing folder. In my experience learners in courses seldom create data folders where you expect ;-) ]
+
+[Andy: Can we make it a bit clearer what we expect learners to do in this session ? I realise we want to be flexible, but a bit more guidance for instructors & learners would be helpful. I can add some suggestions if you want. e.g. might be good to get instructors to ask learners which they plan to do from : 1. own coord data, 2. own named data, 3. provided data]
 
 ## C. Map your own coordinate data
 
@@ -32,7 +34,31 @@ Remember, to map these data in R usually requires a 3 step process:
 3. plot the `sf` object (create a quick interactive plot using `mapview`)
 
 ![**Mapping steps**](../../for_instructors/images/steps.jpg)
+## D. Map data that just has place names
 
+[Andy: I moved the mention of joining & added a little more, otherwise instructors may have tricky job managing people who are trying to follow this.]
+
+If your data only has names of regions or places and no coordinates, you will need to join these names to spatial data that does have the coordinates. If this is the case, you can work through the afrimapr online tutorial on [joining](https://andysouth.shinyapps.io/join-admin/#section-outline-of-this-tutorial); also available via [afrilearnr](https://github.com/afrimapr/afrilearnr/tree/main/inst/tutorials/join-admin).
+
+Also we provide a concise example here :
+
+```{r join-example}
+
+library(dplyr)
+
+# 1. example dataframe
+mydf <- data.frame(country=c("Togo","Ghana"),
+                   language=c("French","English"))
+
+# 2. join the dataframe onto an existing spatial object
+africa_df <- dplyr::left_join(x = africountries, 
+                              y = mydf, 
+                              by = c("name_long" = "country")
+                              )
+# 3. visualise the joined data
+mapview(africa_df, zcol="language")
+
+```
 
 #### Extra steps
 
