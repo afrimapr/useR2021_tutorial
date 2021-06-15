@@ -45,19 +45,21 @@ Packages in R contain extra methods and data to add to base R. Think of R like a
 
 We will be loading a package called `afrilearndata` containing example data for us to look at.
 
-We will also use packages that allow us to deal with spatial data. Cities, highways and boundaries are examples of point, line and polygon data termed **vector data**, while data such as gridded population density are termed **raster data**.
+We will also use packages that allow us to deal with spatial data. Cities, highways and boundaries are examples of point, line and polygon data termed **vector data**, while data such as gridded population density are termed **raster data**. We explain this in more detail in Section C below.
 
 The packages `sf` and `raster` allow us to deal with vector and raster data.
 
 Using an R package requires a 2 step process:
 
-1. `install.packages`               is needed only once to install a package
-from the internet
+1. `install.packages("[package_name]")`               is needed only once to install a package
+from the internet (replace [package_name] with the name of your package)
 2. `library([package_name])`        is needed each time you start a new R session
 
-To check that the packages have been installed, try running the `library` commands below. If they have been installed, nothing should happen. Not very interesting but a good check and a good reminder that this is what you will need to do each time you start a new R session. 
+These two steps are like installing an app on your mobile phone (typically you only have to do that once unless you delete the app) and opening the app (which you have to do every time you use the specific app).
 
-If you happen to get messages indicating any of the packages are not installed, you can use `install.packages` to install them. For the purposes of this useR! 2021 tutorial, the packages have been installed into the RStudio Cloud project. Because we have already installed the packages for you, you only have to run the code below to load the packages into this working environment (see step 2 above). However, if you run this tutorial locally on your own computer, you will need to install these packages if you haven't already done so. You can find a script that will install all the necessary packages in the project main directory `packages_and_data.R`.
+To check that the packages have been installed, try running the `library([package_name])` commands below. If they have been installed, nothing should happen. R will only give a message if thee is a problem but not when this command is run successfully. 
+
+If you happen to get messages indicating any of the packages are not installed, you can use `install.packages("[package_name]")` to install them. For the purposes of this useR! 2021 tutorial, the packages have been installed into the RStudio Cloud project. Because we have already installed the packages for you, you only have to run the code below to load (open) the packages into this working environment (see step 2 above). However, if you run this tutorial locally on your own computer, you will need to install these packages if you haven't already done so. You can find a script that will install all the necessary packages in the project main directory `packages_and_data.R`.
 
 
 ```{r library_packages}
@@ -142,10 +144,10 @@ We call them 'objects' because the data are already stored in R. This is also to
 
 In R there are various functions that can help us explore what an object contains. There is some overlap between them, but we find these particularly useful:
 
-1. str()        structure of the object, displays both names and values
-2. head()       displays the first few rows of data with the column names
-3. names()      gives just column names
-4. class()      gives the class of the object, that is broadly what sort of object it is  
+1. `str()`        shows the structure of the object, displays both names and values
+2. `head()`       displays the first few rows of data with the column names
+3. `names()`      gives just column names
+4. `class()`      gives the class of the object, that is broadly what sort of object it is  
 
 Have a look at the outputs for `africapitals`:
 
@@ -258,7 +260,7 @@ tm_shape(afrihighway) +
 
 ```
 
-Colour dependent on one of the dataframe columns:
+Colour dependent on the specific value in the provided dataframe column for each feature:
 
 ```{r tmap-lines1c}
 
@@ -309,11 +311,11 @@ tm_shape(africountries) +
 ```
 
 **Raster data**
-Gridded (raster) data can represent e.g. remotely sensed or modelled data.
+Gridded (raster) data can represent e.g. remotely sensed or modeled data.
 
 It can be displayed with `tm_shape([object_name])` and `tm_raster`. 
 
-In this example, if you use the default breaks by not specifying any arguments with `tm_raster()`, the map looks entirely one colour. This is because there are few very high density cells and a majority of cells with very low values. This is a common issue with population data. The default (equal-interval) classification doesn't work well; most of the map falls in the lowest category. If you look very closely you can see a few very high value cells e.g. in Lagos and Cairo.     
+In this example, if you use the default breaks by not specifying any arguments with `tm_raster()`, the map looks as if it are entirely made up of one colour. This is because there are a few very high density cells and a majority of cells with very low values. This is a common issue with population data. The default (equal-interval) classification doesn't work well; most of the map falls in the lowest category. If you look very closely you can see a few very high value cells e.g. in Lagos and Cairo.     
 
 ```{r tmap-raster1a}
 
@@ -334,7 +336,7 @@ tm_shape(afripop2020) +
 
 ```
 
-As well as changing the breaks we can also change the palette of colours used with `palette =`. In this example we use `rev` to reverse the order of the colours to make higher population values darker. Try removing `rev` and see the result.
+As well as changing the breaks we can also change the palette of colours used with `palette =`. In this example we use `rev` to reverse the order of the colours to make higher population values darker. Try removing `rev` and look at the result.
 
 ```{r tmap-raster2}
 
@@ -419,7 +421,7 @@ Note that the order of the layers in the code matters. It is a bit like a painti
 
 ## G. Interactive maps
 
-The maps created so far have been static. There are also great options for creating interactive maps, which are useful for web pages or reports where readers can zoom, pan and enable/disable layers.
+The maps created so far have been static. There are also great options for creating interactive maps, which are useful for web pages or online reports where readers can zoom, pan and enable/disable layers.
 
 In `tmap` you can keep the identical code that we've looked at so far and just add a single line at the beginning, `tmap_mode('view')`, to change to interactive 'view' mode. View mode will remain active for your R session and you can switch back to static `plot` mode using `tmap_mode('plot')`. 
 
@@ -471,7 +473,7 @@ This is a start; there are plenty of other options (e.g. maps can also be made w
 
 ## useR! 2021: Next session
 
-Our next session in this useR! 2021 tutorial will be an entry level outline to demonstrate getting spatial data of different types into R as a first step to mapping it. The aim is to support you getting your own data into R before making maps or other plots.
+In this session we relied on data that was already saved as R objects rather than reading it in from data files. Our next session in this useR! 2021 tutorial will be an entry level outline to demonstrate getting spatial data of different types into R as a first step to mapping it. The aim is to support you getting your own data into R before making maps or other plots.
 
 
 ## BREAK TIME OF 15 MINS
