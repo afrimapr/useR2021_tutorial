@@ -1,5 +1,5 @@
 ---
-title: "userR! 2021 afrimapr tutorial session two: Getting my data in"
+title: "userR! 2021 afrimapr tutorial session two: Reading my spatial data into R"
 date: "07 July 2021"
 output:
   pdf_document: default
