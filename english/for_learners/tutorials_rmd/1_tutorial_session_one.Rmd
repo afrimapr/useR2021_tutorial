@@ -155,14 +155,13 @@ Have a look at the outputs for `africapitals`:
 
 str(africapitals)
 
-
 ```
+
 ```{r sf-points-head}
 
 # sf-points-head
 
 head(africapitals)
-
 
 ```
 
@@ -172,7 +171,6 @@ head(africapitals)
 
 names(africapitals)
 
-
 ```
 
 ```{r sf-points-class}
@@ -181,8 +179,8 @@ names(africapitals)
 
 class(africapitals)
 
-
 ```
+
 These show us that `africapitals` is of class `sf` and `data.frame` and contains a series of columns including ones named: 'capitalname', 'countryname' and 'geometry'.
 
 `data.frame`, often referred to as just dataframe, is the most common object type in R certainly for new users. Dataframes store data in rows and named columns like a spreadsheet. 

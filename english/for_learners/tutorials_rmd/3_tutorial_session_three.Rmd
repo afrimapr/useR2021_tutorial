@@ -19,7 +19,6 @@ If you do not have your own data, or data in a different format, we have provide
 
 To map your own data on RStudio Cloud, you will first need to upload your data by clicking on `Upload` in the Files pane (typically the bottom right pane). We suggest you save to a `data` folder in the directory where you are running the R script (for this tutorial it is `english/for_learners/data`). 
 
-[Andy: I suggest we make it super clear where we expect learners to put the data to an existing folder. In my experience learners in courses seldom create data folders where you expect ;-) ]
 
 [Andy: Can we make it a bit clearer what we expect learners to do in this session ? I realise we want to be flexible, but a bit more guidance for instructors & learners would be helpful. I can add some suggestions if you want. e.g. might be good to get instructors to ask learners which they plan to do from : 1. own coord data, 2. own named data, 3. provided data]
 

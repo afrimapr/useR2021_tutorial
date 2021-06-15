@@ -67,7 +67,7 @@ library(readr)
 ```
 
 
-## C. Read spatial data from files & preview with mapview
+## C. Read spatial data from files and preview with `mapview`
 
 So far we have been using data that already exists within R as an R object.
 
@@ -96,9 +96,9 @@ myobject2 <- raster::raster(filename2)
 
 ```
 
-Remember for these commands to work, your data already has to be in either vector format (e.g shapefile, geopackage or kml) or in raster format (e.g. .tif or .grd). Find more information on which file formats will work here at https://en.wikipedia.org/wiki/GIS_file_formats. 
+Remember, for these commands to work, your data already has to be in either vector format (e.g shapefile, geopackage or kml) or in raster format (e.g. .tif or .grd). Find more information on which file formats will work here at https://en.wikipedia.org/wiki/GIS_file_formats. 
 
-Earlier we demonstrated using the package `tmap`. Here we are going to introduce the package `mapview` for quickly making interactive maps. In many ways the interactive maps made by `mapview` are very similar to those from `tmap`. We like `mapview` because it is super-easy to make a first preview map to look at your data. All you need is `mapview([name-of-spatial-object])` and it should make a map. You don't need to know whether the object contains points, lines, polygons or raster data, and you don't need to remember any additional options to get that first preview.
+Earlier we demonstrated using the package `tmap`. Here we are going to introduce the package `mapview` for quickly making interactive maps. In many ways, the interactive maps made by `mapview` are very similar to those from `tmap`. We like `mapview` because it is super-easy to make a first preview map to look at your data. All you need is `mapview([name-of-spatial-object])` and it should make a map. You don't need to know whether the object contains points, lines, polygons or raster data, and you don't need to remember any additional options to get that first preview.
 
 ```{r mapview1}
 
@@ -117,7 +117,7 @@ Later we will see that `mapview` arguments can be used to give you more control 
 
 ## D. .csv, .txt or .xls file with coordinates
 
-Up until now we have been using files and objects that are already spatial - they came from an R spatial package or GIS. Now we are going to move onto looking at data that are not yet in a spatial format. This could be just be a spreadsheet or text file that you have created yourself.
+Up until now, we have been using files and objects that are already spatial - they came from an R spatial package or GIS. Now we are going to move onto looking at data that are not yet in a spatial format. This could be just be a spreadsheet or text file that you have created yourself.
 
 Text files containing point data are one of the commonest file types that we see in small-scale operational mapping of data. Usually these consist of one row per record (e.g. the location of a health facility or disease case or dwelling) with two columns containing the coordinates of the location (e.g. longitude & latitude or x & y), and other columns containing attributes of that location (e.g. facility or disease type). 
 
@@ -289,7 +289,7 @@ mapview(afrihighway)
 
 ## H. raster tiff 
 
-To read in raster data we can use the package `raster` instead of `sf`. 
+To read in raster data, we can use the package `raster` instead of `sf`. 
 
 (Note that there also newer packages `stars` and `terra` that may come to replace `raster` in the coming months and years, but for now we decided to stick with `raster` that is more well known and tested.)  
 
@@ -329,8 +329,8 @@ mydf <- readr::read_csv(filename)
 
 mydf <- mydf[(1:100), ] #select first 100 rows just to make quicker online
 
-#or can select a single country
-#mydf <- mydf[which(mydf$country_name == "Burkina Faso"), ]
+# or can select a single country:
+# mydf <- mydf[which(mydf$country_name == "Burkina Faso"), ]
 
 # 2. convert to sf object
 mysf <- sf::st_as_sf(mydf, 
@@ -364,7 +364,7 @@ at | a series of numeric values e.g. `c(0,1,10)` | breakpoints between colours
 
 ## Next steps
 
-This is a start, there are plenty of other options for making maps in R. For more detailed information and lessons, please see the [online tutorials](https://afrimapr.github.io/afrimapr.website/training/) and the [afrilearnr](https://github.com/afrimapr/afrilearnr) package containing these [tutorials](https://github.com/afrimapr/afrilearnr/tree/main/inst/tutorials) on github.
+This is a start; there are plenty of other options for making maps in R. For more detailed information and lessons, please see the [online tutorials](https://afrimapr.github.io/afrimapr.website/training/) and the [afrilearnr](https://github.com/afrimapr/afrilearnr) package containing these [tutorials](https://github.com/afrimapr/afrilearnr/tree/main/inst/tutorials) on github.
 
 More information on reading different spatial file formats into R can be found in [this section in the excellent Geocomputation in R](https://geocompr.robinlovelace.net/read-write.html#data-input).
 
@@ -391,5 +391,3 @@ If you do not have your own data, or data in a different format, we have provide
 ## BREAK TIME OF 15 MINS
 
 
-## Optional exercises
-**to include a few exercises for learners to work through should they have the time**
