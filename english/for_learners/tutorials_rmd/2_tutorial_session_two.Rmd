@@ -268,7 +268,7 @@ mapview(africountries)
 Because shapefiles are spatial files, they can be read directly into a spatial (`sf`) object in R with `sf::read_sf(filename)`. This combines steps 1 & 2 from the csv example. In addition, you don't need to specify in R which columns contain the coordinates or what the Coordinate Reference System (crs) is. This is effectively because these two steps will have been done when the file was created.
 
 
-## G. .kml, .gpkg & .json
+## G. .kml, .gpkg and .json
 
 For other spatial vector formats (e.g. kml, geopackage & geojson) the same approach as for a shapefile usually works i.e. `sf::read_sf(filename)`.
 

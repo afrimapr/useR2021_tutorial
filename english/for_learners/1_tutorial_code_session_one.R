@@ -45,6 +45,7 @@ tmap::tm_shape(afripop2020) +
   tm_symbols(col = "blue", alpha=0.4, scale = .6 ) +
   tm_legend(show = FALSE)
 
+
 #### SECTION D: SPATIAL DATA OBJECTS ----
 
 # sf-points-str
@@ -62,6 +63,7 @@ names(africapitals)
 # sf-points-class
 
 class(africapitals)
+
 
 #### SECTION E: FIRST MAPS WITH TMAP ----
 
@@ -102,6 +104,7 @@ tm_shape(afrihighway) +
 tm_shape(afrihighway) +
    tm_lines(col = "Name")  # use a column name from the object
 
+
 ## VECTOR DATA POLYGONS
 
 # tmap-polygons-1a
@@ -137,10 +140,9 @@ tm_shape(afripop2020) +
 tm_shape(afripop2020) +
   tm_raster(breaks=c(0,2,20,200,2000,25000))
 
-
 # tmap-raster2
+# changing the colour palette
 
-#changing the colour palette
 tm_shape(afripop2020) +
   tm_raster(palette = rev(viridisLite::magma(5)), breaks=c(0,2,20,200,2000,25000))
 
@@ -178,10 +180,11 @@ tmap::tm_shape(afripop2020) +
   tm_borders("white", lwd = .5) +
   tm_text("iso_a3", size = "AREA") +
   tm_shape(afrihighway) +
-  tm_lines(col = "blue") +
+  tm_lines(col = "blue") + 
   tm_shape(africapitals) +
   tm_symbols(col = "green",  scale = .6 ) +
   tm_legend(show = FALSE)
+
 
 #### SECTION G: INTERACTIVE MAPS ----
 
@@ -195,7 +198,7 @@ tmap::tm_shape(afripop2020) +
   tm_borders("white", lwd = .5) +
   tm_text("iso_a3", size = "AREA") +
   tm_shape(afrihighway) +
-  tm_lines(col = "blue") +
+  tm_lines(col = "blue") + 
   tm_shape(africapitals) +
   tm_symbols(col = "green",  scale = .6 ) +
   tm_legend(show = FALSE)
