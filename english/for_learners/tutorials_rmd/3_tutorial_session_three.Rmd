@@ -11,7 +11,37 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## A. Outline of this tutorial practical session
 
-This session is a practical one where you can practice using your own data for mapping. While we have learnt about different data types today, for this practical session you will need coordinate data to use the skills you have learnt so far. It is possible that your data will be in a different format, for example your data may only have names of regions or places and no coordinates. For this go to section D. 
+This session is a practical in which we challenge you to make a map from data that you have brought with you or found online. The aim is to start your journey away from the safety of the pre-prepared data we have provided in earlier sessions. Mapping diverse data can involve tricky steps to do with data cleaning, reading or manipulating. We aim to provide you with some support in this session to start addressing any such trickiness you may encounter. It is also tricky for us as instructors to move away from the safety of the pre-prepared datasets we know. We cannot anticipate all issues or guarantee that we will be able to fix them in this session. However, we can give you a helping hand to get started and show you how we approach solving such issues ourselves.   
+
+### Learning outcomes
+
+By the end of this session, you will have experienced making a map from data of your own choice. This could be data that you have brought with you, found online or that we have provided. Specifically, you will be able to:
+
+* make decisions on how to manipulate some data of your choice to make a map 
+* have ideas on how to troubleshoot inevitable tricky issues with mapping 
+* make informed decisions about presenting data on a map to communicate a message (e.g. classifications and colour palettes)
+* have some ideas for where to look for open data
+
+
+Our suggestion for you to do in this session (in order of preference) is to make a map from :
+1. coordinate data that you have brought with you
+1. coordinate data that you have found online
+1. data referenced by place names (a bit trickier and we didn't cover in detail today)
+1. data we have provided
+
+By the end of the session we would like you to email a screenshot of your mapping efforts - it doesn't matter how far you get. We will compile these in to an image to send out to all participants afterwards.
+ 
+ 
+[Andy: I got to here, see what you think of the suggestions above based on previous training I've given, then we can add more below.] 
+
+
+[Andy: if you think the ooutline above can work, we should also add small sections below on 
+a) troubleshooting e.g. google & stackoverflow
+b) online sources of data ]
+
+
+ 
+It is possible that your data will be in a different format, for example your data may only have names of regions or places and no coordinates. For this go to section D. 
 
 If you do not have your own data, or data in a different format, we have provided an example dataset in the data folder in the RStudio Cloud project called `WHO_Africa_HealthFacilities.csv` (a subset of the dataset: World Health Organization (WHO) (2019) A spatial database of health facilities managed by the public health sector in sub-Saharan Africa. [Reference Source](https://www.who.int/malaria/areas/surveillance/public-sector-health-facilities-ss-africa/en/)).
 
@@ -20,7 +50,6 @@ If you do not have your own data, or data in a different format, we have provide
 To map your own data on RStudio Cloud, you will first need to upload your data by clicking on `Upload` in the Files pane (typically the bottom right pane). We suggest you save to a `data` folder in the directory where you are running the R script (for this tutorial it is `english/for_learners/data`). 
 
 
-[Andy: Can we make it a bit clearer what we expect learners to do in this session ? I realise we want to be flexible, but a bit more guidance for instructors & learners would be helpful. I can add some suggestions if you want. e.g. might be good to get instructors to ask learners which they plan to do from : 1. own coord data, 2. own named data, 3. provided data]
 
 ## C. Map your own coordinate data
 
