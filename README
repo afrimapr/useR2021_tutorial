@@ -24,5 +24,5 @@ Folders and files
 
 - The 'packages_and_data.R' script in the project folder contains all the packages you will need if you run this tutorial locally (i.e. not in RStudio Cloud).
 
-- The 'data' folder contains data to use for the practical part of the tutorial in session three if you have not brought your own data or if your data is not in coordinate format.
+- The 'data' folder contains data to use for the practical part of the tutorial in session three if you have not brought your own data or if your data is not in the correct format (e.g. does not include geospatial information).
 
