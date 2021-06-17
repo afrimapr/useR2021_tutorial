@@ -21,7 +21,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```
 
-This is a Session 2 of the tutorial developed for useR! 2021 on mapping spatial data in R using African data. It is aimed at participants with limited R and GIS experience.
+This is Session 2 of the tutorial developed for useR! 2021 on mapping spatial data in R using African data. It is aimed at participants with limited R and GIS experience.
 
 The tutorial is based on the [afrilearnr](https://github.com/afrimapr/afrilearnr) package containing [tutorials](https://github.com/afrimapr/afrilearnr/tree/main/inst/tutorials) to teach spatial data skills in R with African data. It is part of the [afrimapr](https://afrimapr.github.io/afrimapr.website/) project, which is funded through the Wellcome Trust’s Open Research Fund and Data for Science and Health.
 
@@ -29,13 +29,14 @@ The tutorial has been adapted for useR! 2021 - please see the [online tutorials]
 
 PDFs of the tutorials have been included in the project documents folder.
 
+
 ## A. Outline of this tutorial session
 
 An entry level outline to demonstrate getting spatial data of different types into R. The aim is to support you reading your own data into R before making maps or other plots. It is aimed at participants with limited R and GIS experience.
 
 ### Learning outcomes
 
-By the end of this session, you will have learnt how read different spatial data types into R, and how to use these data to create static and interactive maps. Specifically, you will be able to:
+By the end of this session, you will have learnt how to read different spatial data types into R, and how to use these data to create static and interactive maps. Specifically, you will be able to:
 
 * read spatial data in R using `sf` and `raster`
 * make a map from tabular data with coordinates included
@@ -126,7 +127,7 @@ Later we will see that `mapview` arguments can be used to give you more control 
 
 ## D. .csv, .txt or .xls file with coordinates
 
-Until now, we have been using files and objects that are already stored as spatial objects - they came from an R spatial packages or GIS. Now we are going to move onto looking at data that are not yet in a spatial format. This could be just be a spreadsheet or text file with a spatial component that you have created yourself.
+Until now, we have been using files and objects that are already stored as spatial objects - they came from an R spatial package or GIS. Now we are going to move onto looking at data that are not yet in a spatial format. This could be just be a spreadsheet or text file with a spatial component that you have created yourself.
 
 Text files containing point data are one of the commonest file types that we see in small-scale operational mapping of data. Usually these consist of one row per record (e.g. the location of a health facility or disease case or dwelling) with two columns containing the coordinates of the location (e.g. longitude & latitude or x & y), and other columns containing attributes of that location (e.g. facility or disease type). 
 
@@ -188,7 +189,7 @@ The below steps apply if you have point data saved in tabular format with two co
 ### CRS
 `crs` stands for Coordinate Reference System. It determines how coordinates are converted to a location on the Earth. In this case it tells `sf` what system to expect. In the majority of cases, coordinates (e.g. collected from a GPS) are stored in a system represented by the code `4326`. 4326 is the EPSG (European Petroleum Survey Group) code for longitude, latitude using the WGS84 datum, but you don't really need to know that. 4326 is a good number to remember! If you would like to read more, visit https://epsg.io/about.
 
-**See what happens** when the `crs=4326` argument is not included in Step2 in the code below:
+**See what happens** when the `crs=4326` argument is not included in Step 2 in the code below:
 
 ```{r csv-crs-missing}
 
@@ -225,9 +226,9 @@ You can read an excel file into a dataframe using the package [readxl](https://r
 
 ## E. Directly create an R object
 
-An alternative to loading a file is to directly create a dataframe containing coordinates within R. When you create a dataframe in R, you will not nead to read in a file because the data is created within R itself.
+An alternative to loading a file is to directly create a dataframe containing coordinates within R. When you create a dataframe in R, you will not need to read in a file because the data is created within R itself.
 
-In the example below try changing the coordinates within the dataframe at step 1, and run to see the points change.
+In the example below, try changing the coordinates within the dataframe at step 1, and run to see the points change.
 
 ```{r dataframe-sf}
 
@@ -253,7 +254,7 @@ Note that in this example the coordinates are stored in columns named x & y, whi
 
 ## F. Shapefiles (.shp)
 
-Shapefiles continue to be a common format for spatial data despite the fact that they are rather old now and some things about them are not ideal. One thing that can confuse users is that a shapefile consists of a collection of files with the same name and different suffixes. If some of the files are not present then it may no longer be possible to work with the data.
+Shapefiles continue to be a common format for spatial data despite the fact that they are rather old now and some things about them are not ideal. One thing that can confuse users is that a shapefile consists of a collection of files with the same name and different suffixes. If some of the files are not present, then it may no longer be possible to work with the data.
 
 e.g. myfile.shp, myfile.shx, myfile.dbf, myfile.prj
 
@@ -274,7 +275,7 @@ mapview(africountries)
 ```
   
   
-Because shapefiles are spatial files, they can be read directly into a spatial (`sf`) object in R with `sf::read_sf(filename)`. This combines steps 1 & 2 from the csv example. In addition, you don't need to specify which columns contain the coordinates or what the Coordinate Reference System (crs) is. This is effectively because these two steps will have been done when the file was created. In other words these special files already tell R what the values are for those two settings without us having to specify it.
+Because shapefiles are spatial files, they can be read directly into a spatial (`sf`) object in R with `sf::read_sf(filename)`. This combines steps 1 and 2 from the csv example. In addition, you don't need to specify which columns contain the coordinates or what the Coordinate Reference System (crs) is. This is effectively because these two steps will have been done when the file was created. In other words, these spatial files already tell R what the values are for those two settings without us having to specify it.
 
 
 ## G. .kml, .gpkg and .json
@@ -320,7 +321,7 @@ mapview(myrast)
   
 Note that the map above appears mostly dark. This is the same issue we came across in the first session. This is because there are only a few very high density cells and a majority of cells with very low values. This is a common issue with population data. The default, equal-interval classification, doesn't work well, most of the cells on the map fall in the lowest category. If you look very closely you can see a few very high value cells e.g. in Lagos & Cairo. 
 
-In session 1 of this tutorial we fixed the problem in `tmap` using the `breaks=` argument to set the breakpoints between colours. In `mapview` we can achieve the same using `at=`.
+In session 1 of this tutorial, we fixed the problem in `tmap` using the `breaks=` argument to set the breakpoints between colours. In `mapview` we can achieve the same using `at=`.
 
 **To try** replace the final line above with this : `mapview(myrast, at=c(0,1,10,100,1000,10000,100000))`. Experiment with different breakpoints. 
 

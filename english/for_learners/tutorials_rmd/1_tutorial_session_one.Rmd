@@ -83,7 +83,6 @@ library(rgdal)
 ```
 
 
-
 ## C. Spatial data overview
 
 * Cities, highways and boundaries are examples of point, line and polygon data termed **vector data**. Vector data typically represents discrete objects e.g. fire hydrants, roads, dams, airports, countries. Vector data can typically be thought of as tabular data with a column for coordinates and other columns with attributes.
