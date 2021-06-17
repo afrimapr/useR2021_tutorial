@@ -51,13 +51,12 @@ The packages `sf` and `raster` allow us to deal with vector and raster data.
 
 Using an R package requires a 2 step process:
 
-1. `install.packages("[package_name]")`               is needed only once to install a package
-from the internet (replace [package_name] with the name of your package)
+1. `install.packages("[package_name]")`               is needed only once to install a package from the internet (replace [package_name] with the name of your package)
 2. `library([package_name])`        is needed each time you start a new R session
 
 These two steps are like installing an app on your mobile phone (typically you only have to do that once unless you delete the app) and opening the app (which you have to do every time you use the specific app).
 
-To check that the packages have been installed, try running the `library([package_name])` commands below. If they have been installed, nothing should happen. R will only give a message if thee is a problem but not when this command is run successfully. 
+To check that the packages have been installed, try running the `library([package_name])` commands below. If they have been installed, nothing should happen. R will only give a message if there is a problem but not when this command is run successfully. 
 
 If you happen to get messages indicating any of the packages are not installed, you can use `install.packages("[package_name]")` to install them. For the purposes of this useR! 2021 tutorial, the packages have been installed into the RStudio Cloud project. Because we have already installed the packages for you, you only have to run the code below to load (open) the packages into this working environment (see step 2 above). However, if you run this tutorial locally on your own computer, you will need to install these packages if you haven't already done so. You can find a script that will install all the necessary packages in the project main directory `packages_and_data.R`.
 
@@ -311,11 +310,11 @@ tm_shape(africountries) +
 ```
 
 **Raster data**
-Gridded (raster) data can represent e.g. remotely sensed or modeled data.
+Gridded (raster) data can represent e.g. remotely sensed or modelled data.
 
 It can be displayed with `tm_shape([object_name])` and `tm_raster`. 
 
-In this example, if you use the default breaks by not specifying any arguments with `tm_raster()`, the map looks as if it are entirely made up of one colour. This is because there are a few very high density cells and a majority of cells with very low values. This is a common issue with population data. The default (equal-interval) classification doesn't work well; most of the map falls in the lowest category. If you look very closely you can see a few very high value cells e.g. in Lagos and Cairo.     
+In this example, if you use the default breaks by not specifying any arguments with `tm_raster()`, the map looks as if it is entirely made up of one colour. This is because there are a few very high density cells and a majority of cells with very low values. This is a common issue with population data. The default (equal-interval) classification doesn't work well; most of the map falls in the lowest category. If you look very closely you can see a few very high value cells e.g. in Lagos and Cairo.     
 
 ```{r tmap-raster1a}
 
@@ -336,7 +335,7 @@ tm_shape(afripop2020) +
 
 ```
 
-As well as changing the breaks we can also change the palette of colours used with `palette =`. In this example we use `rev` to reverse the order of the colours to make higher population values darker. Try removing `rev` and look at the result.
+As well as changing the breaks, we can also change the palette of colours used with `palette =`. In this example we use `rev` to reverse the order of the colours to make higher population values darker. Try removing `rev` and look at the result.
 
 ```{r tmap-raster2}
 
