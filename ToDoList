@@ -5,6 +5,7 @@ TO DO list for the tutorial:
 - read me file will also need translating (leave french text in the same file)
 
 - if necessary, update the base project according to the 'packages_and_data.R' script, and have to then start a new project and copy everything over
+    NB: dplyr
 
 - correct versioning of packages; include packages in package folder for learners to have 'offline'
 

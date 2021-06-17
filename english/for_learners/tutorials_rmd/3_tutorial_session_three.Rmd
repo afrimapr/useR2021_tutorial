@@ -1,7 +1,9 @@
 ---
-title: "userR! 2021 afrimapr tutorial session three: practical"
+title: 'userR! 2021 afrimapr tutorial session three: practical'
 date: "07 July 2021"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -11,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## A. Outline of this tutorial practical session
 
-This session is a practical in which we challenge you to make a map from data that you have brought with you or found online. The aim is to start your journey away from the safety of the pre-prepared data we have provided in earlier sessions. Mapping diverse data can involve tricky steps to do with data cleaning, reading or manipulating. We aim to provide you with some support in this session to start addressing any such trickiness you may encounter. It is also tricky for us as instructors to move away from the safety of the pre-prepared datasets we know. We cannot anticipate all issues or guarantee that we will be able to fix them in this session. However, we can give you a helping hand to get started and show you how we approach solving such issues ourselves.   
+This session is a practical in which we challenge you to make a map from data that you have brought with you or found online. The aim is to start your journey away from the safety of the pre-prepared data we have provided in earlier sessions. Mapping diverse data can involve tricky steps to do with data cleaning, reading or manipulating. We aim to provide you with some support in this session to start addressing any such trickiness you may encounter. It is also tricky for us as instructors to move away from the safety of the pre-prepared datasets we know. We cannot anticipate all issues or guarantee that we will be able to fix them in this session. However, we can give you a helping hand to getting started and show you how we approach solving such issues ourselves.   
 
 ### Learning outcomes
 
@@ -23,35 +25,38 @@ By the end of this session, you will have experienced making a map from data of 
 * have some ideas for where to look for open data
 
 
-Our suggestion for you to do in this session (in order of preference) is to make a map from :
+### Practical options
+
+Our suggestion for you to do in this session (in order of preference) is to make a map from:
 1. coordinate data that you have brought with you
-1. coordinate data that you have found online
-1. data referenced by place names (a bit trickier and we didn't cover in detail today)
-1. data we have provided
+2. coordinate data that you have found online
+3. data referenced by place names (a bit trickier and we didn't cover in detail today)
+4. data we have provided
 
-By the end of the session we would like you to email a screenshot of your mapping efforts - it doesn't matter how far you get. We will compile these in to an image to send out to all participants afterwards.
+By the end of the session, we would like you to email a screenshot of your mapping efforts - it doesn't matter how far you get. We will compile these into an image to send out to all participants afterwards.
  
  
-[Andy: I got to here, see what you think of the suggestions above based on previous training I've given, then we can add more below.] 
+### Troubleshooting (e.g. google and stackoverflow)
+[Andy?]
 
 
-[Andy: if you think the ooutline above can work, we should also add small sections below on 
-a) troubleshooting e.g. google & stackoverflow
-b) online sources of data ]
+## B. Data
+
+It is possible that your data will be in a different format, for example your data may only have names of regions or places and no coordinates. For this go to section E. 
+
+If you do not have your own data, or data in a different format, we have provided an example dataset in the `for_learners/data` folder in the RStudio Cloud project called `WHO_Africa_HealthFacilities.csv` (a subset of the dataset: World Health Organization (WHO) (2019) A spatial database of health facilities managed by the public health sector in sub-Saharan Africa. [Reference Source](https://www.who.int/malaria/areas/surveillance/public-sector-health-facilities-ss-africa/en/)).
 
 
- 
-It is possible that your data will be in a different format, for example your data may only have names of regions or places and no coordinates. For this go to section D. 
+### Online sources of data
+[Andy?]
 
-If you do not have your own data, or data in a different format, we have provided an example dataset in the data folder in the RStudio Cloud project called `WHO_Africa_HealthFacilities.csv` (a subset of the dataset: World Health Organization (WHO) (2019) A spatial database of health facilities managed by the public health sector in sub-Saharan Africa. [Reference Source](https://www.who.int/malaria/areas/surveillance/public-sector-health-facilities-ss-africa/en/)).
 
-## B. Uploading data to RStudio Cloud
+## C. Uploading data to RStudio Cloud
 
 To map your own data on RStudio Cloud, you will first need to upload your data by clicking on `Upload` in the Files pane (typically the bottom right pane). We suggest you save to a `data` folder in the directory where you are running the R script (for this tutorial it is `english/for_learners/data`). 
 
 
-
-## C. Map your own coordinate data
+## D. Map your own coordinate data
 
 #### Suggested steps
 
@@ -62,17 +67,19 @@ Remember, to map these data in R usually requires a 3 step process:
 3. plot the `sf` object (create a quick interactive plot using `mapview`)
 
 ![**Mapping steps**](../../for_instructors/images/steps.jpg)
-## D. Map data that just has place names
 
-[Andy: I moved the mention of joining & added a little more, otherwise instructors may have tricky job managing people who are trying to follow this.]
+## E. Map data that just has place names
 
 If your data only has names of regions or places and no coordinates, you will need to join these names to spatial data that does have the coordinates. If this is the case, you can work through the afrimapr online tutorial on [joining](https://andysouth.shinyapps.io/join-admin/#section-outline-of-this-tutorial); also available via [afrilearnr](https://github.com/afrimapr/afrilearnr/tree/main/inst/tutorials/join-admin).
 
-Also we provide a concise example here :
+Also we provide a concise example here:
+
+[Anne - Andy, this works when I run it, but is throwing an error when I try to knit?]
 
 ```{r join-example}
 
 library(dplyr)
+library(afrilearndata)
 
 # 1. example dataframe
 mydf <- data.frame(country=c("Togo","Ghana"),
@@ -88,10 +95,11 @@ mapview(africa_df, zcol="language")
 
 ```
 
+
 #### Extra steps
 
 1. Practice exploring what the object contains (hint: e.g. `head`, `str`, `names`, `class`)
-2. What happens when you exclude the `crs` argument?
+2. What happens when you exclude the `crs` argument in `mapview`?
 3. Play with the arguments in `mapview` (e.g. `zcol`, `label`, `cex`)
 
 
