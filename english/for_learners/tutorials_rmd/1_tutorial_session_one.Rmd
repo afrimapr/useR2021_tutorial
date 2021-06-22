@@ -2,8 +2,8 @@
 title: 'userR! 2021 afrimapr tutorial session one: Introduction to spatial data'
 date: "07 July 2021"
 output:
-  html_document: default
   pdf_document: default
+  html_document: default
 always_allow_html: true # to fix a knit to pdf error
 ---
 

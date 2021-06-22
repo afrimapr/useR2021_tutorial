@@ -2,8 +2,8 @@
 title: "userR! 2021 afrimapr tutorial session two: Reading my spatial data into R"
 date: "07 July 2021"
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 always_allow_html: true # to fix a knit to pdf error
 ---
 
@@ -107,7 +107,9 @@ Remember, for these commands to work, your data already has to be in either vect
 
 Earlier we demonstrated using the package `tmap`. Here we are going to introduce the package `mapview` for quickly making interactive maps. In many ways, the interactive maps made by `mapview` are very similar to those from `tmap`. We like `mapview` because it is super-easy to make a first preview map to look at your data. All you need is `mapview([name_of_spatial_object])` and it should make a map. Unlike with `tmap`, you don't need to know whether the object contains points, lines, polygons or raster data, and you don't need to remember any additional options to get that first preview.
 
-**Note that interactive maps will not render to pdf using `knit`.**
+
+## **Note that interactive maps will not render to pdf using `knit`.**
+
 
 
 ```{r mapview1}
@@ -167,6 +169,7 @@ mysf <- sf::st_as_sf(mydf,
 ```
 
 
+
 ```{r csv-airports3}
 
 # Step 3. Quick interactive plot
@@ -175,6 +178,7 @@ mysf <- sf::st_as_sf(mydf,
 mapview(mysf)    
 
 ```
+
 
   
 **To apply the code chunk above to your own data:**
@@ -190,6 +194,7 @@ The below steps apply if you have point data saved in tabular format with two co
 `crs` stands for Coordinate Reference System. It determines how coordinates are converted to a location on the Earth. In this case it tells `sf` what system to expect. In the majority of cases, coordinates (e.g. collected from a GPS) are stored in a system represented by the code `4326`. 4326 is the EPSG (European Petroleum Survey Group) code for longitude, latitude using the WGS84 datum, but you don't really need to know that. 4326 is a good number to remember! If you would like to read more, visit https://epsg.io/about.
 
 **See what happens** when the `crs=4326` argument is not included in Step 2 in the code below:
+
 
 ```{r csv-crs-missing}
 
@@ -229,6 +234,8 @@ You can read an excel file into a dataframe using the package [readxl](https://r
 An alternative to loading a file is to directly create a dataframe containing coordinates within R. When you create a dataframe in R, you will not need to read in a file because the data is created within R itself.
 
 In the example below, try changing the coordinates within the dataframe at step 1, and run to see the points change.
+
+
 
 ```{r dataframe-sf}
 
@@ -284,6 +291,7 @@ For other spatial vector formats (e.g. kml, geopackage & geojson) the same appro
 
 Here we show an example with a .kml file of the simplified African highway network from the `afrilearndata` package demonstrated earlier.
 
+
 ```{r kml-highways}
 
 filename <- system.file("extdata","trans-african-highway.kml", package="afrilearndata", mustWork=TRUE)
@@ -330,6 +338,7 @@ In session 1 of this tutorial, we fixed the problem in `tmap` using the `breaks=
 
 In these examples we have used `mapview` to give us a quick view by passing it only the spatial object and not specifying any other options. `mapview` is very flexible and can be made much more informative by passing just a few arguments the map. Try copy and pasting this line to replace the final line in the code window below and running it. It uses the columns named `type` and `name` from the datafile to colour and label the points. `cex` sets the size of the points, in this case making them smaller.
 `mapview(mysf, zcol='type', label='name', cex=2)`
+
 
 ```{r mapview-options-airports}
 
