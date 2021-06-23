@@ -3,7 +3,7 @@
 
 # example spatial data for Africa
 install.packages("remotes")
-remotes::install_github("afrimapr/afrilearndata")
+remotes::install_github("afrimapr/afrilearndata") # ensure version 0.0.0.9003
 library(afrilearndata)
 
 # for working with vector data
@@ -29,6 +29,10 @@ library(readr)
 # to create RasterLayer object
 install.packages("rgdal")
 library(rgdal)
+
+# to join datasets
+install.packages("dplyr")
+library(dplyr)
 
 # for rendering R Markdown
 install.packages("knitr")

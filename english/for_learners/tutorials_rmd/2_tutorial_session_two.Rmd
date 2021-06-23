@@ -404,7 +404,7 @@ We've shown you :
 
 Our next session in this useR! 2021 tutorial will be a practical session where you can practice using your own data for mapping. For this, you will need coordinate data to use the skills you have learnt today. It is possible that your data will be in a different format, for example your data may only have names of regions or places and no coordinates. For this, you will need to learn how to join these names to spatial data that include the coordinates. If this is the case, please work through the afrimapr online tutorial on [joining](https://andysouth.shinyapps.io/join-admin/#section-outline-of-this-tutorial); also available via [afrilearnr](https://github.com/afrimapr/afrilearnr/tree/main/inst/tutorials/join-admin).
 
-If you do not have your own data, or data in a different format, we have provided an example dataset in the data folder in the RStudio Cloud project called `WHO_Africa_HealthFacilities.csv` (a subset of the dataset: World Health Organization (WHO) (2019) A spatial database of health facilities managed by the public health sector in sub-Saharan Africa. [Reference Source](https://www.who.int/malaria/areas/surveillance/public-sector-health-facilities-ss-africa/en/)).
+If you do not have your own data, or data in a different format, we have provided an example dataset in the data folder in the RStudio Cloud project called `health_demo.csv` (a subset of the dataset: World Health Organization (WHO) (2019) A spatial database of health facilities managed by the public health sector in sub-Saharan Africa. [Reference Source](https://www.who.int/malaria/areas/surveillance/public-sector-health-facilities-ss-africa/en/)).
 
 
 ## BREAK TIME OF 15 MINS
