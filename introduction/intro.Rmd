@@ -1,0 +1,159 @@
+---
+title: "Entry level R maps from African data"
+author: "afrimapr"
+date: "07 July 2021"
+output:
+  xaringan::moon_reader:
+    css: ["useR", "useR-fonts"]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+
+---
+
+class: center, middle
+
+# Session one
+
+## 'Introduction to spatial data'
+
+---
+
+## Overview
+
+- R functions that are used in mapping 
+
+- different spatial data types
+
+- packages in R to work with vector and raster data (sf and raster)
+
+- create static and interactive maps
+
+- overlay several data types (layers) on a map
+
+- how to change the colour palette to represent data on a map
+
+---
+
+## Plotting spatial data
+
+Example of what you will learn to map:
+- points (capital cities), 
+- lines (highway network), 
+- polygons (country boundaries), 
+- gridded or raster data (population density)
+
+```{r library_packages, echo=FALSE, message=FALSE}
+
+#### SECTION B: LOADING PACKAGES AND DATA ----
+
+library(sf) 
+library(raster) 
+library(afrilearndata)
+library(tmap)
+library(rgdal)
+library(mapview)
+
+```
+
+```{r set tmap plot, echo=FALSE, message=FALSE}
+tmap_mode("plot") 
+```
+
+```{r tmap-first-view, fig.height=3, dev='svg', echo=FALSE}
+
+tmap::tm_shape(afripop2020) +
+  tm_raster(palette = rev(viridisLite::magma(5)), breaks=c(0,2,20,200,2000,25000)) +
+  tm_shape(africountries) +
+  tm_borders("white", lwd = .5) +
+  tm_shape(afrihighway) +
+  tm_lines(col = "red") + 
+  tm_shape(africapitals) +
+  tm_symbols(col = "blue", alpha=0.4, scale = .6 )+
+  tm_legend(show = FALSE)
+```
+
+---
+
+class: center, middle
+
+# Session two
+
+## 'Reading my spatial data into R'
+
+---
+
+## Overview
+
+- read spatial data in R using `sf` and `raster`
+
+- make a map from tabular data with coordinates included
+
+- the importance of CRS (Coordinate Reference System) to place data on a world map
+
+- read in other spatial data files for vector and raster data
+
+- create static and interactive maps using the `mapview` package and example data available from the `afrilearndata` package
+
+- options for making `mapview` maps more useful
+
+---
+
+insert examples
+
+---
+
+## Interactive maps
+
+
+```{r mapview-options-airports, fig.height=4, dev='svg', echo=FALSE, message=FALSE}
+
+# 1. read into dataframe
+filename <- system.file("extdata", "afriairports.csv", package="afrilearndata", mustWork=TRUE)
+mydf <- readr::read_csv(filename)
+
+mydf <- mydf[(1:100), ] #select first 100 rows just to make quicker online
+
+# or can select a single country:
+# mydf <- mydf[which(mydf$country_name == "Burkina Faso"), ]
+
+# 2. convert to sf object
+mysf <- sf::st_as_sf(mydf, 
+                     coords=c("longitude_deg", "latitude_deg"),
+                     crs=4326)
+
+# 3. quick interactive plot
+#mapview(mysf)
+mapview(mysf, zcol='type', label='name', cex=2)   
+
+```
+
+---
+
+class: center, middle
+
+# Session three
+
+## Practical
+
+---
+
+## Overview
+
+Make a map from data of your own choice (data that you have brought with you, found online or that we have provided). 
+
+Specifically, you will be able to:
+
+- make decisions on how to manipulate some data to make a map
+
+- have ideas on how to troubleshoot inevitable issues with mapping 
+
+- make informed decisions about presenting data on a map to communicate a message (e.g. classifications and colour palettes)
+
+- have some ideas for where to look for open data
+
+---
+
+
