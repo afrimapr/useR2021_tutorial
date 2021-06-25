@@ -48,7 +48,7 @@ To find solutions, we recommend that Google - or your search engine of choice - 
 
 2. If you want to do something and you are not sure how: type your question into the Google search box
 
-Here is a list of super helpful resources and links where you can look for answers to your questions or find ideas for your analys
+Here is a list of [super helpful resources and links](https://support.rstudio.com/hc/en-us/articles/200552336-Getting-Help-with-R) where you can look for answers to your questions or find ideas for your analyses.
 
 When you are looking for answers to your questions or solutions to your problems online, your challenge will be to filter a useful answer that helps you solve your problem, from probably lots of other results that are either not quite relevant, or are outdated, or you don't understand. All of these happen to us.
 
