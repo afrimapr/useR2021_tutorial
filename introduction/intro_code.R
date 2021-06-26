@@ -7,5 +7,3 @@ viewerpane_html("introduction/intro.html")
 # run this code to knit a live preview
 xaringan::inf_mr("introduction/intro.Rmd")
 
-
-.center[![Mapping steps](steps.jpg)]
