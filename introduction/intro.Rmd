@@ -13,7 +13,6 @@ output:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
-
 ---
 
 class: center, middle
@@ -21,6 +20,7 @@ class: center, middle
 # Session one
 
 ## 'Introduction to spatial data'
+
 
 ---
 

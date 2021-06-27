@@ -5,6 +5,7 @@ Solution to inserting afrimapr logo:
 
 useful presentation tips found here:
   http://arm.rbind.io/slides/xaringan.html#105
+  https://garthtarr.github.io/sydney_xaringan/#1
   
 Problem retaining logos and formatting when knitting to html:
-https://bookdown.org/yihui/rmarkdown/xaringan-preview.html
+  https://bookdown.org/yihui/rmarkdown/xaringan-preview.html
