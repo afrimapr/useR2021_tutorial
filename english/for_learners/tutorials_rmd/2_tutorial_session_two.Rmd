@@ -3,8 +3,8 @@ title: "Session 2: Reading my spatial data into R"
 subtitle: "userR! 2021 afrimapr tutorial"
 date: "07 July 2021"
 output:
-  html_document: default
   pdf_document: default
+  html_document: default
 always_allow_html: true # to fix a knit to pdf error
 ---
 
