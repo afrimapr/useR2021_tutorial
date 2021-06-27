@@ -1,9 +1,10 @@
 ---
-title: 'userR! 2021 afrimapr tutorial session three: practical'
+title: "Session 3: Practical"
+subtitle: "userR! 2021 afrimapr tutorial"
 date: "07 July 2021"
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}

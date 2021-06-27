@@ -1,9 +1,10 @@
 ---
-title: 'userR! 2021 afrimapr tutorial session one: Introduction to spatial data'
+title: "Session 1: Introduction to spatial data"
+subtitle: "userR! 2021 afrimapr tutorial"
 date: "07 July 2021"
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 always_allow_html: true # to fix a knit to pdf error
 ---
 
