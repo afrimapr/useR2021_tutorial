@@ -16,7 +16,12 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## A. Outline of this tutorial practical session
 
-This session is a practical in which we challenge you to make a map from data that you have brought with you or found online. The aim is to start your journey away from the safety of the prepared data we have provided in earlier sessions. Mapping real-world data can involve tricky steps to do with data cleaning, reading or manipulating. We aim to provide you with some support in this session to start addressing any such trickiness you may encounter. It is also challenging for us as instructors to move away from the safety of the prepared datasets we know. We cannot anticipate all issues or guarantee that we will be able to fix them in this session. However, we can give you a helping hand to getting started and show you how we approach solving such issues ourselves.   
+This session is a practical in which we challenge you to make a map from data that you have brought with you or found online. The aim is to start your journey away from the safety of the prepared data we have provided in earlier sessions. Mapping real-world data can involve tricky steps to do with data cleaning, reading or manipulating. We aim to provide you with some support in this session to start addressing any such trickiness you may encounter. It is also challenging for us as instructors to move away from the safety of the prepared datasets we know. We cannot anticipate all issues or guarantee that we will be able to fix them in this session. However, we can give you a helping hand to getting started and show you how we approach solving such issues ourselves.
+
+** We challenge you to make a map in which data are represented by differences in colour and/or symbol size to communicate something about their spatial pattern. **
+
+e.g. it might show that values are higher in one area or that there is no particular pattern.
+
 
 ### Learning outcomes
 
@@ -25,7 +30,7 @@ By the end of this session, you will have experienced making a map from data of 
 * make decisions on how to manipulate some data of your choice to make a map 
 * read your own data into R for further manipulation and mapping
 * have ideas on how to troubleshoot inevitable tricky issues with mapping 
-* make informed decisions about presenting data on a map to communicate a message (e.g. classifications and colour palettes)
+* start to think about presenting data on a map to communicate a message (e.g. classifications and colour palettes)
 * have some ideas for where to look for open data
 
 
@@ -51,7 +56,6 @@ To find solutions, we recommend that Google - or your search engine of choice - 
 
 2. If you want to do something and you are not sure how: type your question into the Google search box
 
-Here is a list of [super helpful resources and links](https://support.rstudio.com/hc/en-us/articles/200552336-Getting-Help-with-R) where you can look for answers to your questions or find ideas for your analyses.
 
 When you are looking for answers to your questions or solutions to your problems online, your challenge will be to filter a useful answer that helps you solve your problem, from probably lots of other results that are either not quite relevant, or are outdated, or you don't understand. All of these happen to us.
 
@@ -131,18 +135,10 @@ Remember, to map these data in R usually requires a 3 step process:
 If you have time in this tutorial, try your hand at these extra steps. Or try them after the tutorial. Please reach out to the trainers to address any difficulties you come across.
 
 1. Practice exploring what the object contains (hint: e.g. `head`, `str`, `names`, `class`)
-2. What happens when you exclude the `crs` argument in `mapview`?
-3. Play with the arguments in `mapview` (e.g. `zcol`, `label`, `cex`)
+2. Play with the arguments in `mapview` (e.g. `zcol`, `label`, `cex`)
+3. Try creating an interactive plot using `tmap` that is similar to a `mapview` one (hint: `tmap_mode("plot")` for a static map; `tmap_mode("view")` for the interactive viewing mode)
 
-
-### `tmap`
-
-* Create a quick interactive plot using `tmap` (hint: `tmap_mode("plot")` for a static map; `tmap_mode("view")` for the interactive viewing mode)
-
-
-### Add layers from the objects in `afrilearndata`to your map
-
-* Use the `sf` object you've created from your own data as well as objects like `africapitals` from the `afrilearnrdata` and map using `tmap` (hint: use `tm_shape` & `tm_symbols`)
+4. Add layers from the objects in `afrilearndata`to your own map data e.g. `africapitals` `afriadmin` `africontinent`
 
 
 
@@ -174,6 +170,6 @@ mapview(africa_df, zcol="language")
 
 ```
 
- **Please remember that the interactive maps will not show up in a static PDF document if you run the `knit` command.**
+ * note that interactive maps will not show up in a static PDF document if you run the `knit` command.*
 
 
