@@ -189,5 +189,21 @@ class: center, middle
 
 - Share a screenshot or the code you used to create your map
 
+---
 
+class: center, middle
+
+# afrimapr community meetups
+
+---
+
+## afrimapr community meetups
+
+**Please join us!**
+
+afrimapr has launched a monthly virtual meetup for people working on mapping African data in R. 
+
+The community meets online on the 4th Wednesday of each month to discuss their work, solutions, ideas, resources, and more. 
+
+To learn more or receive the calendar invitation with connection details, please join our afrimapr Google Group at https://groups.google.com/g/afrimapr/ and follow us on Twitter @afrimapr
 
