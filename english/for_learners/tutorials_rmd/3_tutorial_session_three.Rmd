@@ -38,7 +38,7 @@ Our suggestion for you to do in this session (in order of preference) is to make
 3. Data we have provided
 4. Data referenced by place names (Note that this requires knowledge of packages we didn't cover today. Please see pointers in section H below.)
 
-By the end of the session, we would like you to email a screenshot of your mapping efforts - it doesn't matter how far you get. We will compile these into an document to send out to all participants afterwards.
+By the end of the session, we would like you to email a screenshot of your mapping efforts - it doesn't matter how far you get. We will compile these into a document to send out to all participants afterwards.
  
  
 ### Troubleshooting recommendations (Google is your friend) 
