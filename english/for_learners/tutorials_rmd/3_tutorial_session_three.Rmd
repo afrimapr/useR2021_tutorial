@@ -1,9 +1,12 @@
 ---
-title: 'userR! 2021 afrimapr tutorial session three: practical'
+title: "Session 3: Practical"
+subtitle: "userR! 2021 afrimapr tutorial"
 date: "07 July 2021"
 output:
-  pdf_document: default
-  html_document: default
+  pdf_document:
+    toc: true
+  html_document:
+    toc: true
 ---
 
 ```{r setup, include=FALSE}
@@ -93,7 +96,7 @@ Remember, to map these data in R usually requires a 3 step process:
 2. convert the dataframe into an R spatial (package `sf`) object and set `crs` (hint: `sf::st_as_sf`)
 3. plot the `sf` object (create a quick interactive plot using `mapview`)
 
-![**Fig1. Mapping steps**](../../for_instructors/images/steps.jpg)
+![**Mapping steps**](../../for_instructors/images/steps.jpg)
 
 ## E. Coordinate data found online
 
@@ -171,6 +174,6 @@ mapview(africa_df, zcol="language")
 
 ```
 
-## **Please remember that the interactive maps will not show up in a static PDF document if you run the `knit` command.**
+ **Please remember that the interactive maps will not show up in a static PDF document if you run the `knit` command.**
 
 

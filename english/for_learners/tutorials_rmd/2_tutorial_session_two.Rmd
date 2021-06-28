@@ -1,9 +1,12 @@
 ---
-title: "userR! 2021 afrimapr tutorial session two: Reading my spatial data into R"
+title: "Session 2: Reading my spatial data into R"
+subtitle: "userR! 2021 afrimapr tutorial"
 date: "07 July 2021"
 output:
-  html_document: default
-  pdf_document: default
+  html_document:
+    toc: true
+  pdf_document:
+    toc: true
 always_allow_html: true # to fix a knit to pdf error
 ---
 
@@ -108,7 +111,7 @@ Remember, for these commands to work, your data already has to be in either vect
 Earlier we demonstrated using the package `tmap`. Here we are going to introduce the package `mapview` for quickly making interactive maps. In many ways, the interactive maps made by `mapview` are very similar to those from `tmap`. We like `mapview` because it is super-easy to make a first preview map to look at your data. All you need is `mapview([name_of_spatial_object])` and it should make a map. Unlike with `tmap`, you don't need to know whether the object contains points, lines, polygons or raster data, and you don't need to remember any additional options to get that first preview.
 
 
-## **Note that interactive maps will not render to pdf using `knit`.**
+ **Note that interactive maps will not render to pdf using `knit`.**
 
 
 
