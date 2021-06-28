@@ -24,23 +24,21 @@ class: center, middle
 
 ---
 
-## Overview
+## What you will learn
 
-- R mapping functions
+- Loading R packages and data
 
-- different spatial data types
+- What is spatial data
 
-- R packages to work with vector and raster data
+- Creating static and interactive maps
 
-- create static and interactive maps
+- Overlaying several data types on a map
 
-- overlay several data types (layers) on a map
-
-- how to change the colour palette to represent data on a map
+- Working with colour palettes on maps
 
 ---
 
-## Plotting spatial data
+## Example data we'll look at
 
 - points (capital cities) 
 - lines (highway network) 
@@ -79,7 +77,7 @@ tmap::tm_shape(afripop2020) +
 
 ---
 
-### Examples
+### Example static maps we'll create
 
 .pull-left[
 
@@ -105,7 +103,7 @@ tm_shape(afripop2020) +
 ]
 
 ---
-### Examples
+### Example interactive maps we'll create
 
 
 ```{r set tmap plot2, echo=FALSE, message=FALSE}
@@ -137,63 +135,18 @@ class: center, middle
 
 ---
 
-## Overview
+## What you will learn
 
-- read in spatial data files for vector and raster data
+- Read a variety of spatial data file types into R 
 
-- make a map from coordinate data, and read in other spatial data files
+- Use `mapview` for quick interactive maps
 
-- the importance of CRS (Coordinate Reference System) to place data on a world map
+- Options for making `mapview` maps more useful
 
-- create static and interactive maps using the `mapview` package
-
-- options for making `mapview` maps more useful
 
 ---
 
-### Examples
-### 
-
-.pull-left[
-
-```{r csv-airports1, fig.dim=c(4.8, 4.8), out.width="100%", echo=FALSE, message=FALSE}
-
-filename <- system.file("extdata", "afriairports.csv", package="afrilearndata", mustWork=TRUE)
-mydf <- readr::read_csv(filename)
-
-mydf <- mydf[(1:100), ]
-
-mysf <- sf::st_as_sf(mydf, 
-                     coords=c("longitude_deg", "latitude_deg"),
-                     crs=4326)
-mapview(mysf)    
-
-```
-
-
-]
-
-.pull-right[
-
-```{r dataframe-sf, fig.dim=c(4.8, 4.8), out.width="100%", echo=FALSE, message=FALSE}
-
-mydf <- data.frame(x=c(-10,10,30),
-                   y=c(20,0,-20),
-                   attribute=c("a","b","c"))
-
-mysf <- sf::st_as_sf(mydf, 
-                     coords=c("x", "y"),
-                     crs=4326)
-
-mapview(mysf)    
-
-```
-
-]
-
----
-
-## Interactive maps
+## Interactive maps with `mapview`
 
 
 ```{r mapview-options-airports, fig.height=4, dev='svg', echo=FALSE, message=FALSE}
@@ -228,12 +181,13 @@ class: center, middle
 
 ---
 
-## Overview
+## What you will do
 
-Make a map from data of your own choice
+- Make a map from data of your own choice
 
-(data that you have brought with you, found online or that we have provided) 
+- Learn where to find help 
 
+- Share a screenshot or the code you used to create your map
 
 
 
