@@ -6,6 +6,8 @@ TO DO list for the tutorial:
 
 - French session 2: change dataset filename to `health_demo.csv` for provided dataset
 
+- sort our file naming (nb in the code) for french files
+
 - if necessary, update the base project according to the 'packages_and_data.R' script, and have to then start a new project and copy everything over
 
 - correct versioning of packages; include packages in package folder for learners to have 'offline'
@@ -18,5 +20,5 @@ TO DO list for the tutorial:
 
 - pdf final version of the code of conduct
 
-- sort our file naming (nb in the code) for french files
+
 
