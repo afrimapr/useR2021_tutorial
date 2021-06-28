@@ -14,8 +14,11 @@ library(afrilearndata)
 
 #### D. MAP YOUR OWN COORDINATE DATA ----
 
-# Upload your data to RStudio Cloud: click on `Upload` in the Files pane (typically the bottom right pane). 
-# We suggest you save to a `data` folder in the directory where you are running the R script (for this tutorial it is `for_learners/data`)
+# Upload your data to RStudio Cloud: click on `Upload` in the Files pane 
+# (typically the bottom right pane).
+
+# We suggest you save to a `data` folder in the directory where you are running 
+# the R script (for this tutorial it is `for_learners/data`)
 
 # Remember, to map these data in R usually requires a 3 step process:
 
@@ -23,13 +26,16 @@ library(afrilearndata)
 
 ## NB: replace `[your_data].csv` below with the filename of your data
 
-## If you're running this part of the tutorial on RStudio and R that is installed on your own computer (not in RStudio Cloud), 
-## remember to replace the directory path to your file (i.e. '/cloud/project/english/for_learners/data/') 
+## If you're running this part of the tutorial on RStudio and R that is 
+## installed on your own computer (not in RStudio Cloud), 
+## remember to replace the directory path to your file 
+## (i.e. '/cloud/project/english/for_learners/data/') 
 ## with the path to where the file is located on your computer.
 
 dfhealth <- read_csv("/cloud/project/english/for_learners/data/[your_data].csv") 
 
-# 2. convert the dataframe into an R spatial (package `sf`) object and set `crs` (hint: `sf::st_as_sf`)
+# 2. convert the dataframe into an R spatial (package `sf`) object and set `crs` 
+## (hint: `sf::st_as_sf`)
 
 sfhealth <- sf::st_as_sf(dfhealth, 
                          coords=c("Long", "Lat"),
@@ -45,7 +51,8 @@ mapview(sfhealth)
 
 # Download the online data to your computer. Then, upload this data to RStudio Cloud.
 # Click on `Upload` in the Files pane (typically the bottom right pane). 
-# We suggest you save to a `data` folder in the directory where you are running the R script (for this tutorial it is `for_learners/data`)
+# We suggest you save to a `data` folder in the directory where you are running 
+# the R script (for this tutorial it is `for_learners/data`)
 
 # Remember, to map these data in R usually requires a 3 step process:
 
@@ -53,14 +60,17 @@ mapview(sfhealth)
 
 # NB: replace `[your_data].csv` below with the filename of your data
 
-## If you're running this part of the tutorial on RStudio and R that is installed on your own computer (not in RStudio Cloud), 
-## remember to replace the directory path to your file (i.e. '/cloud/project/english/for_learners/data/') 
+## If you're running this part of the tutorial on RStudio and R that is installed 
+## on your own computer (not in RStudio Cloud), 
+## remember to replace the directory path to your file 
+## (i.e. '/cloud/project/english/for_learners/data/') 
 ## with the path to where the file is located on your computer.
 
 dfhealth <- read_csv("/cloud/project/english/for_learners/data/[your_data].csv") 
 
 
-# 2. convert the dataframe into an R spatial (package `sf`) object and set `crs` (hint: `sf::st_as_sf`)
+# 2. convert the dataframe into an R spatial (package `sf`) object and set `crs` 
+## (hint: `sf::st_as_sf`)
 
 sfhealth <- sf::st_as_sf(dfhealth, 
                          coords=c("Long", "Lat"),
@@ -82,7 +92,8 @@ mapview(sfhealth)
 dfhealth <- read_csv("/cloud/project/english/for_learners/data/health_demo.csv")
 
 
-# 2. convert the dataframe into an R spatial (package `sf`) object and set `crs` (hint: `sf::st_as_sf`)
+# 2. convert the dataframe into an R spatial (package `sf`) object and set `crs` 
+# (hint: `sf::st_as_sf`)
 
 sfhealth <- sf::st_as_sf(dfhealth, 
                          coords=c("Long", "Lat"),
@@ -97,7 +108,8 @@ mapview(sfhealth)
 
 #### G. EXTRA STEPS ----
 
-# 1. Practice exploring what the object contains (hint: e.g. `head`, `str`, `names`, `class`). 
+# 1. Practice exploring what the object contains 
+# (hint: e.g. `head`, `str`, `names`, `class`). 
 # Add / remove the # in front of the lines one by one to uncomment the lines
 
 head(sfhealth)
@@ -112,7 +124,8 @@ sfhealth <- sf::st_as_sf(dfhealth,
                          coords=c("Long", "Lat"))
 mapview(sfhealth)
 
-# When there is no `crs` argument, the sf object is still created but mapview is unable to position it in the world. 
+# When there is no `crs` argument, the sf object is still created but mapview is 
+# unable to position it in the world. 
 # The points still appear but there is no map background.
 
 
@@ -125,7 +138,8 @@ mapview(sfhealth, zcol='Admin1', label='Country', cex=5)
 
 
 # `tmap`
-# Create a quick interactive plot using `tmap` (hint: `tmap_mode("plot")` for a static map; 
+# Create a quick interactive plot using `tmap` 
+# (hint: `tmap_mode("plot")` for a static map; 
 # `tmap_mode("view")` for the interactive viewing mode)
 
 tmap_mode("view")
@@ -137,7 +151,8 @@ tmap::tm_shape(sfhealth) +
 # `r tmap & afrilearndata`
 
 # Combine your coordinate data with objects from afrilearndata
-# Use your `sf` object from above and map using `tmap` (hint: use `tm_shape` & `tm_symbols`)
+# Use your `sf` object from above and map using `tmap` 
+# (hint: use `tm_shape` & `tm_symbols`)
 
 tmap::tm_shape(sfhealth) +
   tm_symbols(col = "black", scale = 1) +
