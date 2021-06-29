@@ -18,7 +18,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 This session is a practical in which we challenge you to make a map from data that you have brought with you or found online. The aim is to start your journey away from the safety of the prepared data we have provided in earlier sessions. Mapping real-world data can involve tricky steps to do with data cleaning, reading or manipulating. We aim to provide you with some support in this session to start addressing any such trickiness you may encounter. It is also challenging for us as instructors to move away from the safety of the prepared datasets we know. We cannot anticipate all issues or guarantee that we will be able to fix them in this session. However, we can give you a helping hand to getting started and show you how we approach solving such issues ourselves.
 
-** We challenge you to make a map in which data are represented by differences in colour and/or symbol size to communicate something about their spatial pattern. **
+**We challenge you to make a map in which data are represented by differences in colour and/or symbol size to communicate something about their spatial pattern.**
 
 e.g. it might show that values are higher in one area or that there is no particular pattern.
 
@@ -43,9 +43,19 @@ Our suggestion for you to do in this session (in order of preference) is to make
 3. Data we have provided
 4. Data referenced by place names (Note that this requires knowledge of packages we didn't cover today. Please see pointers in section H below.)
 
-By the end of the session, we would like you to email a screenshot of your mapping efforts - it doesn't matter how far you get. We will compile these into a document to send out to all participants afterwards.
- 
- 
+By the end of the session, we would like you to email a screenshot of your mapping efforts (or save it into your RStudio Cloud project) - it doesn't matter how far you get. We will compile these into a document to send out to all participants afterwards.
+
+
+### Questions to ask before starting with your map
+
+1. What do you want to map?
+2. What format is the data in (e.g. .csv, .xls, .shp, other)?
+3. For .csv or .txt, what are the names of the columns that contain the latitude and longitude coordinates?
+4. If you want to compare data from different places, what will you use to visualise the differences (e.g. point size, colour, etc)?
+5. Do you want to add other data types to your map to give more context (e.g. add layers (different data objects))?
+6. Which mapping package do you want to start with? We covered `tmap` and `mapview` in this tutorial (there are also others)
+
+
 ### Troubleshooting recommendations (Google is your friend) 
 
 Errors, and failures to achieve what we expected or wanted, are inevitable when coding with real data. They happen regularly to all programmers and data analysts, even experienced ones. We cannot teach you how to avoid such errors and temporary failures but we can pass on how we deal with them when they happen to us. A useful thing to consider is that if you come up against a problem, the likelihood is that someone else in the world will have come up against it before. The beauty of coding, the internet and particularly R, is that someone is likely to have posted a solution to your problem somewhere. All you need to do is find it.
@@ -136,10 +146,9 @@ If you have time in this tutorial, try your hand at these extra steps. Or try th
 
 1. Practice exploring what the object contains (hint: e.g. `head`, `str`, `names`, `class`)
 2. Play with the arguments in `mapview` (e.g. `zcol`, `label`, `cex`)
-3. Try creating an interactive plot using `tmap` that is similar to a `mapview` one (hint: `tmap_mode("plot")` for a static map; `tmap_mode("view")` for the interactive viewing mode)
-
-4. Add layers from the objects in `afrilearndata`to your own map data e.g. `africapitals` `afriadmin` `africontinent`
-
+3. What happens when you exclude the `crs` argument in `mapview`?
+4. Try creating an interactive plot using `tmap` that is similar to a `mapview` one (hint: `tmap_mode("plot")` for a static map; `tmap_mode("view")` for the interactive viewing mode)
+5. Add layers from the objects in `afrilearndata` to your own map data e.g. `africapitals` `afriadmin` `africontinent`
 
 
 ## H. Data referenced by place names
@@ -149,7 +158,7 @@ If your data only has names of regions or places and no coordinates, you will ne
 We provide a concise example here:
 
 
-```{r join-example}
+```{r join-example, message=FALSE, warning=FALSE}
 
 library(mapview)
 library(sf)
@@ -170,6 +179,6 @@ mapview(africa_df, zcol="language")
 
 ```
 
- * note that interactive maps will not show up in a static PDF document if you run the `knit` command.*
+**Note that interactive maps will not show up in a static PDF document if you run the `knit` command.**
 
 

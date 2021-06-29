@@ -118,7 +118,16 @@ head(sfhealth)
 #class(sfhealth)
 
 
-# 2. What happens when you exclude the `crs` argument?
+# 2. Play with the arguments in `mapview` (e.g. `zcol`, `label`, `cex`)
+
+sfhealth <- sf::st_as_sf(dfhealth, 
+                         coords=c("Long", "Lat"),
+                         crs=4326)
+
+mapview(sfhealth, zcol='Admin1', label='Country', cex=5)
+
+
+# 3. What happens when you exclude the `crs` argument?
 
 sfhealth <- sf::st_as_sf(dfhealth, 
                          coords=c("Long", "Lat"))
@@ -128,18 +137,15 @@ mapview(sfhealth)
 # unable to position it in the world. 
 # The points still appear but there is no map background.
 
-
-# 3. Play with the arguments in `mapview` (e.g. `zcol`, `label`, `cex`)
+# Remember to recreate `sfhealth` with the `crs` argument
 sfhealth <- sf::st_as_sf(dfhealth, 
                          coords=c("Long", "Lat"),
                          crs=4326)
+mapview(sfhealth)
 
-mapview(sfhealth, zcol='Admin1', label='Country', cex=5)
 
-
-# `tmap`
-# Create a quick interactive plot using `tmap` 
-# (hint: `tmap_mode("plot")` for a static map; 
+# 4. Try creating an interactive plot using `tmap` that is similar to a `mapview` 
+# one (hint: `tmap_mode("plot")` for a static map; 
 # `tmap_mode("view")` for the interactive viewing mode)
 
 tmap_mode("view")
@@ -147,12 +153,8 @@ tmap::tm_shape(sfhealth) +
   tm_symbols(col = "black", scale = 1)
 
 
-
-# `r tmap & afrilearndata`
-
-# Combine your coordinate data with objects from afrilearndata
-# Use your `sf` object from above and map using `tmap` 
-# (hint: use `tm_shape` & `tm_symbols`)
+# 5. Add layers from the objects in `afrilearndata` to your own map data 
+# e.g. `africapitals` `afriadmin` `africontinent`
 
 tmap::tm_shape(sfhealth) +
   tm_symbols(col = "black", scale = 1) +
