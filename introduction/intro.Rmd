@@ -257,9 +257,6 @@ Please note that we will be following the useR!2021 Code of Conduct to provide a
 
 Anyone who violates this Code of Conduct will be reported to useR! 2021, and removed from the tutorial.
 
-We also follow an afrimapr Code of Conduct (https://afrimapr.github.io/afrimapr.website/code-conduct/)
-
-
 ---
 
 class: center, middle
