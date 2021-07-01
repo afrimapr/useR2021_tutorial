@@ -17,10 +17,34 @@ output:
 
 class: center, middle
 
+# Welcome!
+
+
+---
+
+## Schedule
+
+Topic |   | Duration
+ :-- | --- | :-:
+   |   | (minutes)
+Welcome & Introduction  |   | 20
+Navigating RStudio  |   | 15
+Tutorial Session 1  |   | 50
+Break  |   | 15
+Tutorial Session 2  |   | 50
+Break  |   | 15
+Tutorial Session 3  |   | 50
+Wrap up  |   | 5
+Goodbyes  |   | 5
+
+
+---
+
+class: center, middle
+
 # Session one
 
 ## 'Introduction to spatial data'
-
 
 ---
 
@@ -191,6 +215,53 @@ class: center, middle
 
 ---
 
+## How this tutorial will work
+
+Following this introduction, you will go to breakout rooms (English / French)
+for the tutorial:
+
+Topic |   | Duration
+ :-- | --- | :-:
+   |   | (minutes)
+Navigating RStudio  |   | 15
+Tutorial Session 1  |   | 50
+Break  |   | 15
+Tutorial Session 2  |   | 50
+Break  |   | 15
+Tutorial Session 3  |   | 50
+Wrap up  |   | 5
+
+
+Then back into the main training room for goodbyes
+
+---
+
+## Zoom
+
+- After this introduction, when you are asked to join a break out room, click yes!
+
+- At the end of the tutorial, the break out rooms will close and you will automatically be transferred back into the main room
+
+- If you need help or have a question during the tutorial, please _**write a message in the zoom chat channel**_ - there are helpers and tutors in each break out room who will help you
+
+- Please also note we have a _**shared google document**_ where you can ask questions, share ideas, etc. Please also take a minute to introduce yourselves here (the link has been pasted in the Zoom chat channel)
+https://docs.google.com/document/d/1nsD1pi-F88oJ8Dr2zA522G2liI5C1yQxL73QZVeZNWE
+
+
+
+---
+
+## Code of Conduct
+
+Please note that we will be following the useR!2021 Code of Conduct to provide a safe and inclusive conference experience for everyone regardless of age, gender, sexual orientation, disability, physical appearance, race, or religion (or lack thereof) (Details here: https://user2021.r-project.org/participation/coc/)
+
+Anyone who violates this Code of Conduct will be reported to useR! 2021, and removed from the tutorial.
+
+We also follow an afrimapr Code of Conduct (https://afrimapr.github.io/afrimapr.website/code-conduct/)
+
+
+---
+
 class: center, middle
 
 # afrimapr community meetups
@@ -206,4 +277,17 @@ afrimapr has launched a monthly virtual meetup for people working on mapping Afr
 The community meets online on the 4th Wednesday of each month to discuss their work, solutions, ideas, resources, and more. 
 
 To learn more or receive the calendar invitation with connection details, please join our afrimapr Google Group at https://groups.google.com/g/afrimapr/ and follow us on Twitter @afrimapr
+
+---
+
+## afrimapr
+
+- Our website (http://afrimapr.org)
+
+- Find us on GitHub (https://github.com/afrimapr)
+
+- Follow us on Twitter (@afrimapr)
+
+- Google group for discussion (https://groups.google.com/g/afrimapr)
+
 
