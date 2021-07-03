@@ -3,9 +3,9 @@ title: "Session 2: Reading my spatial data into R"
 subtitle: "userR! 2021 afrimapr tutorial"
 date: "07 July 2021"
 output:
-  html_document:
-    toc: true
   pdf_document:
+    toc: true
+  html_document:
     toc: true
 always_allow_html: true # to fix a knit to pdf error
 ---
@@ -54,7 +54,7 @@ Please reach out during and/or after the course to the trainers and other partic
 ## B. Loading packages and data
 For the purposes of this useR! 2021 tutorial, the packages have been installed into the RStudio Cloud project. Because we have already installed the packages for you, you only have to run the code below to load the packages into this working environment. However, if you run this tutorial locally on your own computer, you will need to install these packages if you haven't already done so. You can find a script that will install all the necessary packages in the project main directory `packages_and_data.R`.
 
-```{r packages}
+```{r packages, warning=FALSE, message=FALSE}
 
 # for working with vector data
 library(sf) 
@@ -115,14 +115,14 @@ Earlier we demonstrated using the package `tmap`. Here we are going to introduce
 
 
 
-```{r mapview1}
+```{r mapview1, warning=FALSE, message=FALSE}
 
 library(mapview)
 mapview(myobject1)
 
 ```
 
-```{r mapview2}
+```{r mapview2, warning=FALSE, message=FALSE}
 
 mapview(myobject2)
 
