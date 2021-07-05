@@ -1,9 +1,11 @@
 ---
 title: "useR! 2021 Code of Conduct"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
-Please see: https://afrimapr.github.io/afrimapr.website/code-conduct/
+Please see: https://user2021.r-project.org/participation/coc/
 
 The organizers of useR! 2021 are dedicated to providing a safe and inclusive conference experience for everyone regardless of age, gender, sexual orientation, disability, physical appearance, race, or religion (or lack thereof).
 
