@@ -3,9 +3,9 @@ title: "Session 2: Importer mes données spatiales dans R"
 subtitle: "Tutoriel de afrimapr à userR! 2021"
 date: "07 July 2021"
 output:
-  pdf_document:
-    toc: true
   html_document:
+    toc: true
+  pdf_document:
     toc: true
 always_allow_html: true # afin de corriger une erreur de compilation en PDF
 ---
@@ -353,7 +353,7 @@ mydf <- readr::read_csv(filename)
 mydf <- mydf[(1:100), ] # Sélectionner les 100 premières lignes afin d'accélerer les opérations en ligne
 
 # Ou vous pouvez sélectionner un pays
-mydf <- mydf[which(mydf$country_name == "Cameroon"), ]
+#mydf <- mydf[which(mydf$country_name == "Cameroon"), ]
 
 # 2. Convertir les données spatiales en objet sf
 mysf <- sf::st_as_sf(mydf, 
@@ -362,6 +362,8 @@ mysf <- sf::st_as_sf(mydf,
 
 # 3. Carte intéractive rapide
 mapview(mysf)
+#mapview(mysf, zcol='type', label='name', cex=2) 
+
 
 ```
 

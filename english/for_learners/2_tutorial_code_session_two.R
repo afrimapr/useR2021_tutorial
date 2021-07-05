@@ -150,7 +150,7 @@ mydf <- readr::read_csv(filename)
 mydf <- mydf[(1:100), ] #select first 100 rows just to make quicker online
 
 # or can select a single country:
-# mydf <- mydf[which(mydf$country_name == "Burkina Faso"), ]
+# mydf <- mydf[which(mydf$country_name == "Cameroon"), ]
 
 # 2. convert to sf object
 mysf <- sf::st_as_sf(mydf, 
@@ -158,8 +158,8 @@ mysf <- sf::st_as_sf(mydf,
                      crs=4326)
 
 # 3. quick interactive plot
-#mapview(mysf)
-mapview(mysf, zcol='type', label='name', cex=2)   
+mapview(mysf)
+#mapview(mysf, zcol='type', label='name', cex=2)   
 
 
 
