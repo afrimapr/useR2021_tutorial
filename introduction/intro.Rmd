@@ -22,38 +22,23 @@ class: center, middle
 
 ---
 
-## Schedule
-
-Topic |   | Duration
- :-- | --- | :-:
-   |   | (minutes)
-Welcome & Introduction  |   | 20
-Navigating RStudio  |   | 15
-Tutorial Session 1  |   | 50
-Break  |   | 15
-Tutorial Session 2  |   | 50
-Break  |   | 15
-Tutorial Session 3  |   | 50
-Wrap up  |   | 5
-Goodbyes  |   | 5
-
-
----
-
 ## Meet your teaching team
 
 
-**English**
+_**English**_
 
-Instructors: Andy South, Laurie Baker
+**Instructors:** Andy South, Laurie Baker
 
-Helpers: Anelda van der Walt, Shelmith Kariuki
+**Helpers:** Anelda van der Walt, Shelmith Kariuki, Anne Treasure
 
-**French**
+<br>
+<br>
 
-Instructor: Ghislain Nono Gueye
+_**French**_
 
-Helpers: Ahmadou Dicko, Bryan Tegomoh
+**Instructor:** Ghislain Nono Gueye
+
+**Helpers:** Ahmadou Dicko, Bryan Tegomoh
 
 ---
 
@@ -67,7 +52,7 @@ library(tidyverse)
 ```
 
 ```{r set tmap, echo=FALSE, message=FALSE}
-tmap_mode("plot") 
+tmap_mode("view") 
 ```
 
 ```{r learners map, fig.dim=c(4.8, 4.8), out.width="100%", echo=FALSE, message=FALSE, warning=FALSE}
@@ -98,10 +83,33 @@ tm_shape(map_data) +
 
 ```
 
-**Collaborative document:**
+---
 
-Please note we have a _**shared google document**_ where you can ask questions, share ideas, etc. Please also take a minute to introduce yourselves here (the link has been pasted in the Zoom chat channel)
+## Collaborative document
+
+Please note we have a _**shared google document**_ where you can ask questions, share ideas, etc. 
+
+Please also take a minute to introduce yourselves here.
+
+The link has been pasted in the Zoom chat channel:
 https://docs.google.com/document/d/1nsD1pi-F88oJ8Dr2zA522G2liI5C1yQxL73QZVeZNWE
+
+---
+
+## Schedule
+
+Topic |   | Duration
+ :-- | --- | :-:
+   |   | (minutes)
+Welcome & Introduction  |   | 20
+Navigating RStudio  |   | 15
+Tutorial Session 1  |   | 50
+Break  |   | 15
+Tutorial Session 2  |   | 50
+Break  |   | 15
+Tutorial Session 3  |   | 50
+Wrap up  |   | 5
+Goodbyes  |   | 5
 
 ---
 
@@ -320,7 +328,7 @@ https://docs.google.com/document/d/1nsD1pi-F88oJ8Dr2zA522G2liI5C1yQxL73QZVeZNWE
 
 Please note that we will be following the useR!2021 Code of Conduct to provide a safe and inclusive conference experience for everyone regardless of age, gender, sexual orientation, disability, physical appearance, race, or religion (or lack thereof) (Details here: https://user2021.r-project.org/participation/coc/)
 
-Anyone who violates this Code of Conduct will be reported to useR! 2021, and removed from the tutorial.
+Anyone who violates this Code of Conduct will be reported to useR!2021, and removed from the tutorial.
 
 ---
 
