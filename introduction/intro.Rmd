@@ -1,5 +1,5 @@
 ---
-title: "Entry level R maps from African data"
+title: "Entry level R maps from African data | Cartes simples avec des données africaines" 
 author: "afrimapr"
 date: "07 July 2021"
 output:
@@ -17,7 +17,7 @@ output:
 
 class: center, middle
 
-# Welcome!
+# Welcome!     |      Bienvenue!
 
 
 ---
@@ -37,6 +37,35 @@ Tutorial Session 3  |   | 50
 Wrap up  |   | 5
 Goodbyes  |   | 5
 
+
+---
+
+## Meet your teaching team
+
+
+**English**
+
+Instructors: Andy South, Laurie Baker
+
+Helpers: Anelda van der Walt, Shelmith Kariuki
+
+**French**
+
+Instructor: Ghislain Nono Gueye
+
+Helpers: Ahmadou Dicko, Bryan Tegomoh
+
+---
+
+## Meet your fellow learners
+
+insert map
+
+
+**Collaborative document:**
+
+Please note we have a _**shared google document**_ where you can ask questions, share ideas, etc. Please also take a minute to introduce yourselves here (the link has been pasted in the Zoom chat channel)
+https://docs.google.com/document/d/1nsD1pi-F88oJ8Dr2zA522G2liI5C1yQxL73QZVeZNWE
 
 ---
 
