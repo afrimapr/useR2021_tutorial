@@ -59,8 +59,44 @@ Helpers: Ahmadou Dicko, Bryan Tegomoh
 
 ## Meet your fellow learners
 
-insert map
+```{r library packages, echo=FALSE, message=FALSE}
 
+library(tmap) 
+library(tidyverse)
+
+```
+
+```{r set tmap, echo=FALSE, message=FALSE}
+tmap_mode("plot") 
+```
+
+```{r learners map, fig.dim=c(4.8, 4.8), out.width="100%", echo=FALSE, message=FALSE, warning=FALSE}
+
+# read in data
+df <- read_csv("data/countries.csv")
+
+## Mapping
+# Count the number of registrations per country
+my_countries <- df %>% 
+   rename(name = "country") %>% 
+   mutate(name = as_factor(name)) %>% 
+   group_by(name) %>% 
+   tally(name = "count")
+
+# Load the World data set from tmap
+data(World)
+
+# Join the dataframe created above onto the World dataset to get country shapes
+map_data <- World %>% left_join(my_countries, by = "name")
+
+tm_shape(map_data) +
+   tm_polygons("count", 
+               palette="-magma", 
+               contrast=.7, 
+               id="name", 
+               title="Number of participants")
+
+```
 
 **Collaborative document:**
 
@@ -100,7 +136,7 @@ class: center, middle
 
 ```{r library_packages, echo=FALSE, message=FALSE}
 
-#### SECTION B: LOADING PACKAGES AND DATA ----
+#### LOAD PACKAGES AND DATA ----
 
 library(sf) 
 library(raster) 
