@@ -47,3 +47,11 @@ library(tinytex)
 # Running the suggested code `remotes::install_github("r-spatial/mapview")` made the knit work here.
 remotes::install_github("r-spatial/mapview")
 
+# for data manipulation
+install.packages("tidyverse")
+library(tidyverse)
+
+# for cool presentations in R (e.g. the introduction in this tutorial)
+install.packages("xaringan")
+library(xaringan)
+
