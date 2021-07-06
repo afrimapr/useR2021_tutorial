@@ -1,0 +1,7 @@
+"0",""
+"0","filename <- system.file(""extdata"",""afripop2020.tif"", package=""afrilearndata"", mustWork=TRUE)"
+"0",""
+"0","myrast <- raster::raster(filename)"
+"0",""
+"0","# quick interactive plot"
+"0","mapview(myrast)"

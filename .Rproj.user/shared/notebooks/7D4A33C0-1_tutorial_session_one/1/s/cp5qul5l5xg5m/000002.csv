@@ -1,0 +1,9 @@
+"0",""
+"0","# tmap-lines1c"
+"0","tmap_mode('plot') "
+"2","tmap mode set to plotting
+"
+"0","tm_shape(afrihighway) +"
+"0","   tm_lines(col = ""Name"")  # use a column name from the object"
+"2","Legend labels were too wide. The labels have been resized to 0.29, 0.26, 0.27, 0.25, 0.30, 0.35, 0.27, 0.35, 0.25, 0.20, 0.29, 0.24, 0.23, 0.18, 0.26, 0.27, 0.27, 0.26, 0.30, 0.20, 0.24, 0.28, 0.36, 0.25, 0.23, 0.36, 0.29, 0.25, 0.23, 0.27. Increase legend.width (argument of tm_layout) to make the legend wider and therefore the labels larger.
+"

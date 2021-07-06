@@ -1,0 +1,8 @@
+"0",""
+"0","tmap_mode('plot') "
+"2","tmap mode set to plotting
+"
+"0","#changing the colour palette"
+"0","tm_shape(afripop2020) + "
+"0","  tm_raster(palette = rev(viridisLite::magma(5)), breaks=c(0,2,20,200,2000,25000))"
+"0",""

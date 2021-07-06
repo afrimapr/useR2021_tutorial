@@ -1,0 +1,8 @@
+"0",""
+"0","filename <- system.file(""extdata"",""trans-african-highway.kml"", package=""afrilearndata"", mustWork=TRUE)"
+"0",""
+"0","afrihighway <- sf::read_sf(filename)"
+"0",""
+"0","# quick interactive plot"
+"0","#mapviewOptions(fgb = FALSE) # to fix error with mapview rendering the plot on mac"
+"0","mapview(afrihighway)"

@@ -1,0 +1,6 @@
+"0",""
+"0","# Step 2. Convert to sf object and set CRS (Coordinate Reference System)"
+"0",""
+"0","mysf <- sf::st_as_sf(mydf, "
+"0","                     coords=c(""longitude_deg"", ""latitude_deg""),"
+"0","                     crs=4326)"

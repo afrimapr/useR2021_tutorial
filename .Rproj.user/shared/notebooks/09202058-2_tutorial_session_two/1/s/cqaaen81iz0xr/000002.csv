@@ -1,0 +1,5 @@
+"0",""
+"0","library(raster)"
+"0","filename2 <- system.file(""extdata"",""afripop2020.tif"", package=""afrilearndata"", mustWork=TRUE)"
+"0","myobject2 <- raster::raster(filename2)"
+"0",""

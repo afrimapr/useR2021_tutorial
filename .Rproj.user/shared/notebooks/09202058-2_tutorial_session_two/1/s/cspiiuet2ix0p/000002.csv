@@ -1,0 +1,5 @@
+"0",""
+"0","# Step 3. Quick interactive plot"
+"0","# Here we are using `mapview` - another package for creating maps that is an alternative way of making a map to `tmap` (although `tmap` is useful because it can make static maps, which `mapview` cannot do)"
+"0",""
+"0","mapview(mysf)    "

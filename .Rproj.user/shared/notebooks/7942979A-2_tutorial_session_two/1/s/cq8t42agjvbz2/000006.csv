@@ -1,0 +1,31 @@
+"0",""
+"0","# 1. Importer les données dans un dataframe"
+"0","filename <- system.file(""extdata"", ""afriairports.csv"", package=""afrilearndata"", mustWork=TRUE)"
+"0","mydf <- readr::read_csv(filename)"
+"1","
+[36m──[39m [1m[1mColumn specification[1m[22m [36m──────────────────────────────────────────────────────[39m
+cols(
+  .default = col_character(),
+  id = [32mcol_double()[39m,
+  latitude_deg = [32mcol_double()[39m,
+  longitude_deg = [32mcol_double()[39m,
+  elevation_ft = [32mcol_double()[39m,
+  scheduled_service = [32mcol_double()[39m,
+  score = [32mcol_double()[39m,
+  last_updated = [34mcol_datetime(format = """")[39m
+)
+[36mℹ[39m Use [38;5;235m[48;5;253m[38;5;235m[48;5;253m`spec()`[48;5;253m[38;5;235m[49m[39m for the full column specifications.
+
+"
+"0","mydf <- mydf[(1:100), ] # Sélectionner les 100 premières lignes afin d'accélerer les opérations en ligne"
+"0",""
+"0","# Ou vous pouvez sélectionner un pays"
+"0","#mydf <- mydf[which(mydf$country_name == ""Cameroon""), ]"
+"0",""
+"0","# 2. Convertir les données spatiales en objet sf"
+"0","mysf <- sf::st_as_sf(mydf, "
+"0","                     coords=c(""longitude_deg"", ""latitude_deg""),"
+"0","                     crs=4326)"
+"0",""
+"0","# 3. Carte intéractive rapide"
+"0","mapview(mysf, zcol='type', label='name', cex=2) "

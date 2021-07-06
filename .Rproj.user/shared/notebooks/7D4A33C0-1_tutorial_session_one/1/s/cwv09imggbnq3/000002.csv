@@ -1,0 +1,8 @@
+"0",""
+"0","# tmap-polygons-1b"
+"0","tmap_mode('plot') "
+"2","tmap mode set to plotting
+"
+"0","tm_shape(africountries) +"
+"0","      tm_polygons(col=""pop_est"")"
+"0",""

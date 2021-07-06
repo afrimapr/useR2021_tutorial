@@ -1,0 +1,6 @@
+"0",""
+"0","# there is a problem with mapview knitting in r markdown. See the error report here:"
+"0","# https://github.com/r-spatial/mapview/issues/312"
+"0","# Running the suggested code `remotes::install_github(""r-spatial/mapview"")` made the knit work here."
+"0","#remotes::install_github(""r-spatial/mapview"")"
+"0",""
