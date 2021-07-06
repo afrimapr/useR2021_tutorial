@@ -24,11 +24,13 @@ Folders and files
 
 - In this R project, you will find folders for both English and French, depending on your preference.
 
-- In the 'for_learners' folder, each session has an R script - these contain all the code you will need to run through the tutorial. Included in this is code to open an html of the tutorial in the R Studio viewer pane, where you will see the full tutorial content including explanatory text.
+- In the 'for_learners' folder, each session has an R script - these contain all the code you will need to run through the tutorial. Included in this is code to open an html of the tutorial in the RStudio viewer pane, where you will see the full tutorial content including explanatory text.
 
 - There are separate folders containing these .html files for the tutorial sessions, as well as the .pdf and .Rmd files.
 
 - The 'packages_and_data.R' script in the project folder contains all the packages you will need if you run this tutorial locally (i.e. not in RStudio Cloud).
+
+- the `session_info.txt` file in the project folder contains the packages and package versions used in this tutorial.
 
 - The 'data' folder contains data to use for the practical part of the tutorial in session three if you have not brought your own data or if your data is not in the correct format (e.g. does not include geospatial information).
 

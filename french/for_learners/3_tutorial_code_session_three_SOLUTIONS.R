@@ -29,10 +29,10 @@ library(afrilearndata)
 ## If you're running this part of the tutorial on RStudio and R that is 
 ## installed on your own computer (not in RStudio Cloud), 
 ## remember to replace the directory path to your file 
-## (i.e. '/cloud/project/english/for_learners/data/') 
+## (i.e. '/cloud/project/french/for_learners/data/') 
 ## with the path to where the file is located on your computer.
 
-dfhealth <- read_csv("/cloud/project/english/for_learners/data/[your_data].csv") 
+dfhealth <- read_csv("/cloud/project/french/for_learners/data/[your_data].csv") 
 
 # 2. convert the dataframe into an R spatial (package `sf`) object and set `crs` 
 ## (hint: `sf::st_as_sf`)
@@ -63,10 +63,10 @@ mapview(sfhealth)
 ## If you're running this part of the tutorial on RStudio and R that is installed 
 ## on your own computer (not in RStudio Cloud), 
 ## remember to replace the directory path to your file 
-## (i.e. '/cloud/project/english/for_learners/data/') 
+## (i.e. '/cloud/project/french/for_learners/data/') 
 ## with the path to where the file is located on your computer.
 
-dfhealth <- read_csv("/cloud/project/english/for_learners/data/[your_data].csv") 
+dfhealth <- read_csv("/cloud/project/french/for_learners/data/[your_data].csv") 
 
 
 # 2. convert the dataframe into an R spatial (package `sf`) object and set `crs` 
@@ -89,7 +89,7 @@ mapview(sfhealth)
 
 # 1. read the data file into R (hint: `readr` package; `read_csv`)
 
-dfhealth <- read_csv("/cloud/project/english/for_learners/data/health_demo.csv")
+dfhealth <- read_csv("/cloud/project/french/for_learners/data/health_demo.csv")
 
 
 # 2. convert the dataframe into an R spatial (package `sf`) object and set `crs` 
