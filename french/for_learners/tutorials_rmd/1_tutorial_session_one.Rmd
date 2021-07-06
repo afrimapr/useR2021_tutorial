@@ -3,9 +3,9 @@ title: "Session 1: Introduction aux données spatiales"
 subtitle: "Tutoriel de afrimapr à userR! 2021"
 date: "07 July 2021"
 output:
-  html_document:
-    toc: true
   pdf_document:
+    toc: true
+  html_document:
     toc: true
 always_allow_html: true # afin de corriger une erreur de compilation en PDF
 ---
@@ -99,18 +99,6 @@ Nous commencerons par regarder ces différents types de données spatiales dans 
 3. Les frontières/démarcations des pays (polygones) `africountries`
 4. La densité des populations (données maillées/raster) `afripop2020`
 
-Tout d'abord, jettons un coup d'oeil à ces données:
-
-```{r view-data}
-
-# Voir les données
-
-#View(afripop2020)
-#View(africountries)
-#View(afrihighway)
-#View(africapitals)
-
-```
 
 À présent, visualisons ces données sur une carte:
 

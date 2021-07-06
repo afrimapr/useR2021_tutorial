@@ -98,19 +98,6 @@ We will start by looking at these spatial data for Africa, shown in the map belo
 3. Country boundaries (polygons) `africountries`
 4. Population density (gridded or raster data) `afripop2020`
 
-Let's first take a look at the data:
-
-```{r view-data}
-
-# View the data
-
-#View(afripop2020)
-#View(africountries)
-#View(afrihighway)
-#View(africapitals)
-
-```
-
 Now, to view these data on a map:
 
 ```{r tmap-first-view, echo=FALSE}

@@ -21,17 +21,6 @@ library(tmap)
 library(rgdal)
 
 
-#### SECTION C: SPATIAL DATA OVERVIEW ----
-
-# View the data
-
-View(afripop2020)
-View(africountries)
-View(afrihighway)
-View(africapitals)
-
-
-
 #### SECTION D: SPATIAL DATA OBJECTS ----
 
 # sf-points-str
