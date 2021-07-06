@@ -1,8 +1,0 @@
-"0",""
-"0","# tmap-polygons-1d"
-"0","tmap_mode('plot') "
-"2","tmap mode set to plotting
-"
-"0","tm_shape(africountries) +"
-"0","  tm_polygons(col=""income_grp"", border.col = ""white"")"
-"0",""

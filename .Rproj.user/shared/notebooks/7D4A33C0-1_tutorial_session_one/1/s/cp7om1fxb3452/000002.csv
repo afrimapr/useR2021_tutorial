@@ -1,7 +1,0 @@
-"0",""
-"0","# tmap-lines1a"
-"0","tmap_mode('plot') "
-"2","tmap mode set to plotting
-"
-"0","tm_shape(afrihighway) +"
-"0","  tm_lines()"

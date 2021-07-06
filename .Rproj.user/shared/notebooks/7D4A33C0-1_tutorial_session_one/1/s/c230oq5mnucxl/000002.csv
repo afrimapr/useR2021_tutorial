@@ -1,8 +1,0 @@
-"0",""
-"0","# tmap-points1c"
-"0","tmap_mode('plot') "
-"2","tmap mode set to plotting
-"
-"0","tm_shape(africapitals) +"
-"0","  tm_symbols(col = ""pop"")"
-"0",""

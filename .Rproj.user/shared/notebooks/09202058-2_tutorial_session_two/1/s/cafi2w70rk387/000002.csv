@@ -1,7 +1,0 @@
-"0",""
-"0","# read file into a spatial object"
-"0","filename <- system.file(""extdata"",""africountries.shp"", package=""afrilearndata"", mustWork=TRUE)"
-"0","africountries <- sf::read_sf(filename)"
-"0",""
-"0","# quick interactive plot"
-"0","mapview(africountries)"

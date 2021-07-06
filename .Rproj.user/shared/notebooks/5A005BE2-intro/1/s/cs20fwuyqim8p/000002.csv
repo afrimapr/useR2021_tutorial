@@ -1,5 +1,0 @@
-"0",""
-"0","tm_shape(africountries) +"
-"0","  tm_polygons(col=""income_grp"", border.col = ""white"")"
-"2","Some legend labels were too wide. These labels have been resized to 0.62. Increase legend.width (argument of tm_layout) to make the legend wider and therefore the labels larger.
-"
