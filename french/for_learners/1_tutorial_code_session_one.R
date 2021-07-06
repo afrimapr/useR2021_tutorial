@@ -31,20 +31,6 @@ View(afrihighway)
 View(africapitals)
 
 
-# first tmap map
-
-tmap_mode("plot")
-
-tmap::tm_shape(afripop2020) +
-  tm_raster(palette = rev(viridisLite::magma(5)), breaks=c(0,2,20,200,2000,25000)) +
-  tm_shape(africountries) +
-  tm_borders("white", lwd = .5) +
-  tm_shape(afrihighway) +
-  tm_lines(col = "red") +
-  tm_shape(africapitals) +
-  tm_symbols(col = "blue", alpha=0.4, scale = .6 ) +
-  tm_legend(show = FALSE)
-
 
 #### SECTION D: SPATIAL DATA OBJECTS ----
 
