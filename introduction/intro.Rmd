@@ -23,6 +23,14 @@ class: center, middle
 
 ---
 
+# Main aims today
+
+### Get you started making maps in R
+
+### Give you the confidence & knowledge to progress after today
+
+---
+
 ## Meet your teaching team
 
 
@@ -97,6 +105,8 @@ https://docs.google.com/document/d/1nsD1pi-F88oJ8Dr2zA522G2liI5C1yQxL73QZVeZNWE
 ---
 
 ### Our trainers need your interaction !
+
+If you are hesitating to ask a question please remember that you asking questions make our job more fun.
 
 ![](dog-interaction-needed-640.jpg)
 
@@ -280,11 +290,11 @@ Topic |   | Duration
    |   | (minutes)
 Welcome & Introduction  |   | 20   
 Navigating RStudio  |   | 15
-Tutorial Session 1  |   | 50
+**Tutorial Session 1**  |   | 50
 Break  |   | 15
-Tutorial Session 2  |   | 50
+**Tutorial Session 2**  |   | 50
 Break  |   | 15
-Tutorial Session 3  |   | 50
+**Tutorial Session 3**  |   | 50
 Wrap up  |   | 5
 
 
