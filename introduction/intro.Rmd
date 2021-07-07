@@ -106,7 +106,7 @@ https://docs.google.com/document/d/1nsD1pi-F88oJ8Dr2zA522G2liI5C1yQxL73QZVeZNWE
 
 ### Our trainers need your interaction !
 
-If you are hesitating to ask a question please remember that you asking questions make our job more fun.
+If you are hesitating to ask a question please remember that you asking questions makes our job more fun.
 
 ![](dog-interaction-needed-640.jpg)
 
@@ -357,7 +357,7 @@ To learn more or receive the calendar invitation with connection details, please
 
 
 funded by the Wellcome Trust Open Research Fund & Data for Science and Health
-![:scale 40%](wellcome-trust-vector-logo.svg)
+![:scale 35%](wellcome-trust-vector-logo.svg)
 
 
 
