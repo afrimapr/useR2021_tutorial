@@ -10,6 +10,7 @@ output:
     css: ["useR", "useR-fonts"]
     lib_dir: libs
     nature:
+      beforeInit: "macros.js"
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
@@ -19,6 +20,14 @@ class: center, middle
 
 # Welcome!     |      Bienvenue!
 
+
+---
+
+# Main aims today
+
+### Get you started making maps in R
+
+### Give you the confidence & knowledge to progress after today
 
 ---
 
@@ -44,14 +53,14 @@ _**French**_
 
 ## Meet your fellow learners
 
-```{r library packages, echo=FALSE, message=FALSE}
+```{r library packages, echo=FALSE, message=FALSE, warning=FALSE}
 
 library(tmap) 
 library(tidyverse)
 
 ```
 
-```{r set tmap, echo=FALSE, message=FALSE}
+```{r set tmap, echo=FALSE, message=FALSE, warning=FALSE}
 tmap_mode("view") 
 ```
 
@@ -87,41 +96,39 @@ tm_shape(map_data) +
 
 ## Collaborative document
 
-Please note we have a _**shared google document**_ where you can ask questions, share ideas, etc. 
-
-Please also take a minute to introduce yourselves here.
+We have a _**shared google document**_ where you can ask questions, share ideas, etc. 
+Please take a minute to introduce yourselves in the document.
 
 The link has been pasted in the Zoom chat channel:
 https://docs.google.com/document/d/1nsD1pi-F88oJ8Dr2zA522G2liI5C1yQxL73QZVeZNWE
 
 ---
 
-## Schedule
+### Our trainers need your interaction !
 
-Topic |   | Duration
- :-- | --- | :-:
-   |   | (minutes)
-Welcome & Introduction  |   | 20
-Navigating RStudio  |   | 15
-Tutorial Session 1  |   | 50
-Break  |   | 15
-Tutorial Session 2  |   | 50
-Break  |   | 15
-Tutorial Session 3  |   | 50
-Wrap up  |   | 5
-Goodbyes  |   | 5
+If you are hesitating to ask a question please remember that you asking questions makes our job more fun.
+
+![](dog-interaction-needed-640.jpg)
 
 ---
 
-class: center, middle
 
-# Session one
 
-## 'Introduction to spatial data'
+## The tutorial will be divided into 3 sessions 
+
+
+####1 Introduction to spatial data & mapping in R
+
+
+####2 Outline of how to get spatial data into R
+
+
+####3 PRACTICAL : we challenge you to make a map from data of your choice
 
 ---
 
-## What you will learn
+
+## Session 1 learning
 
 - Loading R packages and data
 
@@ -224,15 +231,8 @@ tmap::tm_shape(afripop2020) +
 
 ---
 
-class: center, middle
 
-# Session two
-
-## 'Reading my spatial data into R'
-
----
-
-## What you will learn
+## Session 2 learning
 
 - Read a variety of spatial data file types into R 
 
@@ -270,38 +270,31 @@ mapview(mysf, zcol='type', label='name', cex=2)
 
 ---
 
-class: center, middle
 
-# Session three
+## Session 3 (practical) learning
 
-## Practical
+- Make a map from data of your choice
 
----
+- Learn troubleshooting approaches & where to find help 
 
-## What you will do
-
-- Make a map from data of your own choice
-
-- Learn where to find help 
-
-- Share a screenshot or the code you used to create your map
+- Share a screenshot of your mapping progress
 
 ---
 
 ## How this tutorial will work
 
-Following this introduction, you will go to breakout rooms (English / French)
-for the tutorial:
+Following this welcome &introduction, you will go to one of two breakout rooms (English or French).
 
 Topic |   | Duration
  :-- | --- | :-:
    |   | (minutes)
+Welcome & Introduction  |   | 20   
 Navigating RStudio  |   | 15
-Tutorial Session 1  |   | 50
+**Tutorial Session 1**  |   | 50
 Break  |   | 15
-Tutorial Session 2  |   | 50
+**Tutorial Session 2**  |   | 50
 Break  |   | 15
-Tutorial Session 3  |   | 50
+**Tutorial Session 3**  |   | 50
 Wrap up  |   | 5
 
 
@@ -315,26 +308,26 @@ Then back into the main training room for goodbyes
 
 - At the end of the tutorial, the break out rooms will close and you will automatically be transferred back into the main room
 
-- If you need help or have a question during the tutorial, please _**write a message in the zoom chat channel**_ - there are helpers and tutors in each break out room who will help you
+- If you need help or have a question during the tutorial, 
 
-- Please also note we have a _**shared google document**_ where you can ask questions, share ideas, etc. Please also take a minute to introduce yourselves here (the link has been pasted in the Zoom chat channel)
+-- _**write a message in the zoom chat channel**_ - there are helpers in each break out room who will help you
+
+-- type in the _**shared google document**_ where you can ask questions, share ideas, etc. Please introduce yourself in the google doc, if you haven't yet.
 https://docs.google.com/document/d/1nsD1pi-F88oJ8Dr2zA522G2liI5C1yQxL73QZVeZNWE
-
-
 
 ---
 
 ## Code of Conduct
 
-Please note that we will be following the useR!2021 Code of Conduct to provide a safe and inclusive conference experience for everyone regardless of age, gender, sexual orientation, disability, physical appearance, race, or religion (or lack thereof) (Details here: https://user2021.r-project.org/participation/coc/)
+We are following the useR!2021 Code of Conduct to provide a safe and inclusive conference experience for everyone regardless of age, gender, sexual orientation, disability, physical appearance, race, or religion (or lack thereof) (Details here: https://user2021.r-project.org/participation/coc/)
 
 Anyone who violates this Code of Conduct will be reported to useR!2021, and removed from the tutorial.
 
 ---
 
-class: center, middle
+<br>
 
-# afrimapr community meetups
+![:scale 100%](afrimapr-theory-of-change.png)
 
 ---
 
@@ -346,7 +339,7 @@ afrimapr has launched a monthly virtual meetup for people working on mapping Afr
 
 The community meets online on the 4th Wednesday of each month to discuss their work, solutions, ideas, resources, and more. 
 
-To learn more or receive the calendar invitation with connection details, please join our afrimapr Google Group at https://groups.google.com/g/afrimapr/ and follow us on Twitter @afrimapr
+To learn more or receive the calendar invitation with connection details, please join our afrimapr Google Group at https://groups.google.com/g/afrimapr/ and follow us on Twitter [@afrimapr](https://twitter.com/afrimapr)
 
 ---
 
@@ -356,8 +349,15 @@ To learn more or receive the calendar invitation with connection details, please
 
 - Find us on GitHub (https://github.com/afrimapr)
 
-- Follow us on Twitter (@afrimapr)
+- Follow us on Twitter [@afrimapr](https://twitter.com/afrimapr)
 
 - Google group for discussion (https://groups.google.com/g/afrimapr)
+
+- Our other interactive online tutorials (https://afrimapr.github.io/afrilearnr/)
+
+
+funded by the Wellcome Trust Open Research Fund & Data for Science and Health
+![:scale 35%](wellcome-trust-vector-logo.svg)
+
 
 
